@@ -1065,7 +1065,7 @@ class index extends foreground {
 	 * @param string $nickname	昵称
 	 * @return $status {0:已存在;1:成功}
 	 */
-	public function public_organization_ajax() {
+	public function public_check_organization_ajax() {
 		$organization = isset($_GET['organization']) && trim($_GET['organization'])  ? trim($_GET['organization']) : exit('0');
 		if(CHARSET != 'utf-8') {
 			$organization = iconv('utf-8', CHARSET, $organization);
