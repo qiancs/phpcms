@@ -72,7 +72,7 @@ $(function(){
 	$("#organization").formValidator({onshow:"<?php echo L('input') . L('organization');?>"}).inputValidator({min: 1, onerror:"<?php echo L('cannot_empty');?>"}).ajaxValidator({
 		type : "get",
 		url : "",
-		data : "m=member&c=index&a=public_checkorganization_ajax",
+		data : "m=member&c=index&a=public_check_organization_ajax",
 		datatype : "html",
 		async : "false",
 		success : function(data) {

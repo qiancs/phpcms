@@ -85,3 +85,4 @@
 <?php exit;?>06-29 16:41:27 | 2 | include(): Failed opening 'D:\xampp\htdocs\phpcms\phpcms\modules\invest\templates\communist_list.tpl.php' for inclusion (include_path='D:\xampp\php\PEAR') | phpcms\modules\invest\invest.php | 23
 <?php exit;?>06-30 11:31:53 | 2048 | Only variables should be passed by reference | phpcms\modules\member\index.php | 227
 <?php exit;?>07-04 15:28:39 | 2048 | Only variables should be passed by reference | phpcms\modules\member\index.php | 227
+<?php exit;?>07-05 20:22:44 | 2048 | Only variables should be passed by reference | phpcms\modules\member\index.php | 227
