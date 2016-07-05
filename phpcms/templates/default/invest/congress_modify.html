@@ -1,0 +1,181 @@
+{template "member", "header"}
+<div id="memberArea">
+    {template "member", "left"}
+    <div class="col-auto">
+        <div class="col-1">
+        <h6 class="title">{$title}</h6>
+            <div class="content">
+                <form action="?m=invest&c=congress&a=update" method="post">
+                    <table class="table_form" cellspacing="0" width="100%">
+                        <tr>
+                            <th width="150">姓名：</th>
+                            <td><input class="input-text" name="name" size="10" value="{$row[name]}"></td>
+                        </tr>
+                        <tr>
+                            <th width="150">身份证号：</th>
+                            <td><input class="input-text" name="identity" size="30" value="{$row[identify]}"></td>
+                        </tr>
+                        <tr>
+                            <th width="150">所在单位党委名称：</th>
+                            <td><input class="input-text" name="organization" size="30" value="{$row[organization]}"></td>
+                        </tr>
+                        <tr>
+                            <th width="150">现任（原任）职务：</th>
+                            <td><input class="input-text" name="office" size="30" value="{$row[office]}"></td>
+                        </tr>
+                        <tr>
+                            <th width="150">性别：</th>
+                            <td>
+                                {form::select(array('男' => '男', '女' => '女'), $row[sex], 'name="sex"', '请选择')}
+                            </td>
+                        </tr>
+                        <tr>
+                            <th width="150">民族：</th>
+                            <td>
+                                {form::select(array('汉族' => '汉族', '回族' => '回族', '满族' => '满族', '蒙古族' => '蒙古族',
+                                '壮族' => '壮族', '其他少数民族' => '其他少数民族'),
+                                $row[nation], 'name="nation"', '请选择')}
+                            </td>
+                        </tr>
+                        <tr>
+                            <th width="150">出生年月：</th>
+                            <td>
+                                {form::date('birth', $row[birth])}
+                            </td>
+                        </tr>
+                        <tr>
+                            <th width="150">入党时间：</th>
+                            <td>
+                                {form::date('party', $row[party])}
+                            </td>
+                        </tr>
+                        {if $type == 3 }
+                        <tr>
+                            <th width="150">终止资格时间：</th>
+                            <td>
+                                {form::date('abort_cong_time', $row[abort_cong_time])}
+                            </td>
+                        </tr>
+                        <tr>
+                            <th width="150">终止人大代表职务原因：</th>
+                            <td>
+                                {form::select(array('因涉嫌违纪被罢免' => '因涉嫌违纪被罢免',
+                                '因涉嫌违纪被责令辞职' => '因涉嫌违纪被责令辞职',
+                                '因违反社会道德被责令辞职' => '因违反社会道德被责令辞职',
+                                '丧失国籍' => '丧失国籍',
+                                '其他原因' => '其他原因'), $row[abort_cong_reason], 'name="abort_cong_reason"')}
+                            </td>
+                        </tr>
+                        <tr>
+                            <th width="150">给予党纪处分情况：</th>
+                            <td>
+                                <textarea name="discip_measure" rows="2" cols="50" >{$row[discip_measure]}</textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th width="150">给予党纪处分时间：</th>
+                            <td>
+                                {form::date('measure_time', $row[measure_time])}
+                            </td>
+                        </tr>
+                        <tr>
+                            <th width="150">给予组织处理情况：</th>
+                            <td>
+                                <textarea name="orga_sanction" rows="2" cols="50">{$row[orga_sanction]}</textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th width="150">给予组织处理时间：</th>
+                            <td>
+                                {form::date('sanction_time', $row[sanction_time])}
+                            </td>
+                        </tr>
+                        {elseif ($type == 4)}
+                        <tr>
+                            <th width="150">暂停职务时间：</th>
+                            <td>
+                                {form::date('stop_cong_time', $row[stop_cong_time])}
+                            </td>
+                        </tr>
+                        <tr>
+                            <th width="150">给予党纪处分情况：</th>
+                            <td>
+                                <textarea name="discip_measure" rows="2" cols="50">{$row[discip_measure]}</textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th width="150">给予党纪处分时间：</th>
+                            <td>
+                                {form::date('measure_time', $row[measure_time])}
+                            </td>
+                        </tr>
+                        <tr>
+                            <th width="150">给予组织处理情况：</th>
+                            <td>
+                                <textarea name="orga_sanction" rows="2" cols="50">{$row[orga_sanction]}</textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th width="150">给予组织处理时间：</th>
+                            <td>
+                                {form::date('sanction_time', $row[sanction_time])}
+                            </td>
+                        </tr>
+                        {elseif ($type == 5)}
+                        <tr>
+                            <th width="150">当选无效时间：</th>
+                            <td>
+                                {form::date('invalid_elect_time', $row[invalid_elect_time])}
+                            </td>
+                        </tr>
+                        <tr>
+                            <th width="150">给予党纪处分情况：</th>
+                            <td>
+                                <textarea name="discip_measure" rows="2" cols="50">{$row[discip_measure]}</textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th width="150">给予党纪处分时间：</th>
+                            <td>
+                                {form::date('measure_time', $row[measure_time])}
+                            </td>
+                        </tr>
+                        <tr>
+                            <th width="150">给予组织处理情况：</th>
+                            <td>
+                                <textarea name="orga_sanction" rows="2" cols="50">{$row[orga_sanction]}</textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th width="150">给予组织处理时间：</th>
+                            <td>
+                                {form::date('sanction_time', $row[sanction_time])}
+                            </td>
+                        </tr>
+                        {else}
+                        <h1>无效的人大类型';</h1>
+                        {/if}
+
+                        <tr>
+                            <th width="150">担任本届哪一级代表职务：</th>
+                            <td>
+                                {form::select(array('全国' => '全国', '省级' => '省级', '市级' => '市级', '县级' => '县级'), $row[level], 'name="level"')}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <input type="hidden" value="{$row[id]}" name="id">
+                                <input type="submit" name="dosubmit" value="{$title}">
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+
+            </div>
+
+        </div>
+    </div>
+
+</div>
+{template "member", "footer"}

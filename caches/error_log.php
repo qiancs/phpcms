@@ -1,0 +1,87 @@
+<?php exit;?>06-13 17:26:09 | 2 | array_keys() expects parameter 1 to be array, boolean given | phpcms\libs\functions\global.func.php | 1499
+<?php exit;?>06-13 17:26:09 | 2 | in_array() expects parameter 2 to be array, null given | phpcms\libs\functions\global.func.php | 1500
+<?php exit;?>06-13 17:26:09 | 2 | array_keys() expects parameter 1 to be array, boolean given | phpcms\libs\functions\global.func.php | 1499
+<?php exit;?>06-13 17:26:09 | 2 | in_array() expects parameter 2 to be array, null given | phpcms\libs\functions\global.func.php | 1500
+<?php exit;?>06-13 17:26:09 | 2 | array_keys() expects parameter 1 to be array, boolean given | phpcms\libs\functions\global.func.php | 1499
+<?php exit;?>06-13 17:26:09 | 2 | in_array() expects parameter 2 to be array, null given | phpcms\libs\functions\global.func.php | 1500
+<?php exit;?>06-13 17:26:09 | 2 | array_keys() expects parameter 1 to be array, boolean given | phpcms\libs\functions\global.func.php | 1499
+<?php exit;?>06-13 17:26:09 | 2 | in_array() expects parameter 2 to be array, null given | phpcms\libs\functions\global.func.php | 1500
+<?php exit;?>06-13 17:26:09 | 2 | array_keys() expects parameter 1 to be array, boolean given | phpcms\libs\functions\global.func.php | 1499
+<?php exit;?>06-13 17:26:09 | 2 | in_array() expects parameter 2 to be array, null given | phpcms\libs\functions\global.func.php | 1500
+<?php exit;?>06-13 17:26:09 | 2 | array_keys() expects parameter 1 to be array, boolean given | phpcms\libs\functions\global.func.php | 1499
+<?php exit;?>06-13 17:26:09 | 2 | in_array() expects parameter 2 to be array, null given | phpcms\libs\functions\global.func.php | 1500
+<?php exit;?>06-13 17:26:09 | 2 | array_keys() expects parameter 1 to be array, boolean given | phpcms\libs\functions\global.func.php | 1499
+<?php exit;?>06-13 17:26:09 | 2 | in_array() expects parameter 2 to be array, null given | phpcms\libs\functions\global.func.php | 1500
+<?php exit;?>06-13 17:26:09 | 2 | array_keys() expects parameter 1 to be array, boolean given | phpcms\libs\functions\global.func.php | 1499
+<?php exit;?>06-13 17:26:09 | 2 | in_array() expects parameter 2 to be array, null given | phpcms\libs\functions\global.func.php | 1500
+<?php exit;?>06-13 17:26:09 | 2 | array_keys() expects parameter 1 to be array, boolean given | phpcms\libs\functions\global.func.php | 1499
+<?php exit;?>06-13 17:26:09 | 2 | in_array() expects parameter 2 to be array, null given | phpcms\libs\functions\global.func.php | 1500
+<?php exit;?>06-13 17:26:09 | 2 | array_keys() expects parameter 1 to be array, boolean given | phpcms\libs\functions\global.func.php | 1499
+<?php exit;?>06-13 17:26:09 | 2 | in_array() expects parameter 2 to be array, null given | phpcms\libs\functions\global.func.php | 1500
+<?php exit;?>06-13 17:26:09 | 2 | array_keys() expects parameter 1 to be array, boolean given | phpcms\libs\functions\global.func.php | 1499
+<?php exit;?>06-13 17:26:09 | 2 | in_array() expects parameter 2 to be array, null given | phpcms\libs\functions\global.func.php | 1500
+<?php exit;?>06-13 17:26:09 | 2 | array_keys() expects parameter 1 to be array, boolean given | phpcms\libs\functions\global.func.php | 1499
+<?php exit;?>06-13 17:26:09 | 2 | in_array() expects parameter 2 to be array, null given | phpcms\libs\functions\global.func.php | 1500
+<?php exit;?>06-13 17:26:09 | 2 | array_keys() expects parameter 1 to be array, boolean given | phpcms\libs\functions\global.func.php | 1499
+<?php exit;?>06-13 17:26:09 | 2 | in_array() expects parameter 2 to be array, null given | phpcms\libs\functions\global.func.php | 1500
+<?php exit;?>06-13 17:26:09 | 2 | array_keys() expects parameter 1 to be array, boolean given | phpcms\libs\functions\global.func.php | 1499
+<?php exit;?>06-13 17:26:09 | 2 | in_array() expects parameter 2 to be array, null given | phpcms\libs\functions\global.func.php | 1500
+<?php exit;?>06-13 17:26:09 | 2 | array_keys() expects parameter 1 to be array, boolean given | phpcms\libs\functions\global.func.php | 1499
+<?php exit;?>06-13 17:26:09 | 2 | in_array() expects parameter 2 to be array, null given | phpcms\libs\functions\global.func.php | 1500
+<?php exit;?>06-13 17:26:09 | 2 | mysqli::mysqli(): (HY000/1044): Access denied for user ''@'localhost' to database 'phpcmsv9' | phpcms\libs\classes\db_mysqli.class.php | 55
+<?php exit;?>06-13 17:26:09 | 2 | db_mysqli::error(): Couldn't fetch mysqli | phpcms\libs\classes\db_mysqli.class.php | 390
+<?php exit;?>06-13 17:26:09 | 2 | db_mysqli::errno(): Couldn't fetch mysqli | phpcms\libs\classes\db_mysqli.class.php | 397
+<?php exit;?>06-13 17:26:09 | 2 | db_mysqli::errno(): Couldn't fetch mysqli | phpcms\libs\classes\db_mysqli.class.php | 397
+<?php exit;?>06-13 17:26:09 | 2 | db_mysqli::error(): Couldn't fetch mysqli | phpcms\libs\classes\db_mysqli.class.php | 390
+<?php exit;?>06-13 17:26:09 | 2 | mysqli::close(): Couldn't fetch mysqli | phpcms\libs\classes\db_mysqli.class.php | 409
+<?php exit;?>06-13 18:00:31 | 2048 | Only variables should be passed by reference | phpcms\modules\member\index.php | 227
+<?php exit;?>06-16 10:11:58 | 2 | Illegal string offset 'default' | phpcms\libs\classes\model.class.php | 28
+<?php exit;?>06-16 10:11:58 | 2 | Illegal string offset 'tablepre' | phpcms\libs\classes\model.class.php | 28
+<?php exit;?>06-16 10:11:58 | 2 | Illegal string offset 'default' | phpcms\libs\classes\model.class.php | 29
+<?php exit;?>06-16 10:11:58 | 2 | Illegal string offset 'tablepre' | phpcms\libs\classes\model.class.php | 29
+<?php exit;?>06-16 10:11:58 | 2 | array_merge(): Argument #1 is not an array | phpcms\libs\classes\db_factory.class.php | 45
+<?php exit;?>06-16 10:11:58 | 4096 | Object of class communist_model could not be converted to string | phpcms\modules\invest\representative.php | 22
+<?php exit;?>06-16 10:12:27 | 2 | Illegal string offset 'default' | phpcms\libs\classes\model.class.php | 28
+<?php exit;?>06-16 10:12:27 | 2 | Illegal string offset 'tablepre' | phpcms\libs\classes\model.class.php | 28
+<?php exit;?>06-16 10:12:27 | 2 | Illegal string offset 'default' | phpcms\libs\classes\model.class.php | 29
+<?php exit;?>06-16 10:12:27 | 2 | Illegal string offset 'tablepre' | phpcms\libs\classes\model.class.php | 29
+<?php exit;?>06-16 10:12:27 | 2 | array_merge(): Argument #1 is not an array | phpcms\libs\classes\db_factory.class.php | 45
+<?php exit;?>06-16 10:12:27 | 4096 | Object of class communist_model could not be converted to string | phpcms\modules\invest\representative.php | 22
+<?php exit;?>06-16 10:23:32 | 4096 | Object of class communist_model could not be converted to string | phpcms\modules\invest\representative.php | 22
+<?php exit;?>06-16 10:23:36 | 4096 | Object of class communist_model could not be converted to string | phpcms\modules\invest\representative.php | 22
+<?php exit;?>06-16 11:47:14 | 2 | include(D:\xampp\htdocs\phpcms\phpcms\modules\invest\templates\index.tpl.php): failed to open stream: No such file or directory | phpcms\modules\invest\representative.php | 24
+<?php exit;?>06-16 11:47:14 | 2 | include(): Failed opening 'D:\xampp\htdocs\phpcms\phpcms\modules\invest\templates\index.tpl.php' for inclusion (include_path='D:\xampp\php\PEAR') | phpcms\modules\invest\representative.php | 24
+<?php exit;?>06-16 11:54:20 | 2 | include(D:\xampp\htdocs\phpcms\phpcms\modules\invest\templates\index.tpl.php): failed to open stream: No such file or directory | phpcms\modules\invest\representative.php | 22
+<?php exit;?>06-16 11:54:20 | 2 | include(): Failed opening 'D:\xampp\htdocs\phpcms\phpcms\modules\invest\templates\index.tpl.php' for inclusion (include_path='D:\xampp\php\PEAR') | phpcms\modules\invest\representative.php | 22
+<?php exit;?>06-16 11:54:22 | 2 | include(D:\xampp\htdocs\phpcms\phpcms\modules\invest\templates\index.tpl.php): failed to open stream: No such file or directory | phpcms\modules\invest\representative.php | 22
+<?php exit;?>06-16 11:54:22 | 2 | include(): Failed opening 'D:\xampp\htdocs\phpcms\phpcms\modules\invest\templates\index.tpl.php' for inclusion (include_path='D:\xampp\php\PEAR') | phpcms\modules\invest\representative.php | 22
+<?php exit;?>06-17 14:51:07 | 2 | Invalid argument supplied for foreach() | phpcms\modules\invest\templates\index.tpl.php | 25
+<?php exit;?>06-17 14:55:38 | 2 | Invalid argument supplied for foreach() | phpcms\modules\invest\templates\index.tpl.php | 25
+<?php exit;?>06-17 14:55:39 | 2 | Invalid argument supplied for foreach() | phpcms\modules\invest\templates\index.tpl.php | 25
+<?php exit;?>06-17 16:17:48 | 2 | include(D:\xampp\htdocs\phpcms\phpcms\modules\invest\templates\add.tpl.php): failed to open stream: No such file or directory | phpcms\modules\invest\representative.php | 37
+<?php exit;?>06-17 16:17:48 | 2 | include(): Failed opening 'D:\xampp\htdocs\phpcms\phpcms\modules\invest\templates\add.tpl.php' for inclusion (include_path='D:\xampp\php\PEAR') | phpcms\modules\invest\representative.php | 37
+<?php exit;?>06-20 09:01:15 | 2 | include(D:\xampp\htdocs\phpcms\phpcms\modules\invest\templates\modify.tpl.php): failed to open stream: No such file or directory | phpcms\modules\invest\representative.php | 48
+<?php exit;?>06-20 09:01:15 | 2 | include(): Failed opening 'D:\xampp\htdocs\phpcms\phpcms\modules\invest\templates\modify.tpl.php' for inclusion (include_path='D:\xampp\php\PEAR') | phpcms\modules\invest\representative.php | 48
+<?php exit;?>06-24 08:49:02 | 2048 | Only variables should be passed by reference | phpcms\modules\member\index.php | 227
+<?php exit;?>06-24 08:54:29 | 2048 | Only variables should be passed by reference | phpcms\modules\member\index.php | 227
+<?php exit;?>06-24 08:55:04 | 2048 | Only variables should be passed by reference | phpcms\modules\member\index.php | 227
+<?php exit;?>06-26 13:42:59 | 2048 | Only variables should be passed by reference | phpcms\modules\member\index.php | 227
+<?php exit;?>06-26 13:44:08 | 2048 | Only variables should be passed by reference | phpcms\modules\member\index.php | 227
+<?php exit;?>06-26 13:55:22 | 2048 | Only variables should be passed by reference | phpcms\modules\member\index.php | 227
+<?php exit;?>06-26 14:02:38 | 2048 | Only variables should be passed by reference | phpcms\modules\member\index.php | 227
+<?php exit;?>06-26 14:14:01 | 2048 | Only variables should be passed by reference | phpcms\modules\member\index.php | 227
+<?php exit;?>06-26 14:14:54 | 2048 | Only variables should be passed by reference | phpcms\modules\member\index.php | 227
+<?php exit;?>06-26 15:26:42 | 2048 | Only variables should be passed by reference | phpcms\modules\member\index.php | 227
+<?php exit;?>06-26 15:37:42 | 2048 | Only variables should be passed by reference | phpcms\modules\member\index.php | 227
+<?php exit;?>06-26 15:38:35 | 2048 | Only variables should be passed by reference | phpcms\modules\member\index.php | 227
+<?php exit;?>06-26 15:51:28 | 2048 | Only variables should be passed by reference | phpcms\modules\member\index.php | 227
+<?php exit;?>06-26 15:57:19 | 2048 | Only variables should be passed by reference | phpcms\modules\member\index.php | 227
+<?php exit;?>06-26 16:13:44 | 2048 | Only variables should be passed by reference | phpcms\modules\member\index.php | 227
+<?php exit;?>06-29 16:41:02 | 2 | include(D:\xampp\htdocs\phpcms\phpcms\modules\invest\templates\communist_list.tpl.php): failed to open stream: No such file or directory | phpcms\modules\invest\invest.php | 23
+<?php exit;?>06-29 16:41:02 | 2 | include(): Failed opening 'D:\xampp\htdocs\phpcms\phpcms\modules\invest\templates\communist_list.tpl.php' for inclusion (include_path='D:\xampp\php\PEAR') | phpcms\modules\invest\invest.php | 23
+<?php exit;?>06-29 16:41:06 | 2 | include(D:\xampp\htdocs\phpcms\phpcms\modules\invest\templates\communist_list.tpl.php): failed to open stream: No such file or directory | phpcms\modules\invest\invest.php | 23
+<?php exit;?>06-29 16:41:06 | 2 | include(): Failed opening 'D:\xampp\htdocs\phpcms\phpcms\modules\invest\templates\communist_list.tpl.php' for inclusion (include_path='D:\xampp\php\PEAR') | phpcms\modules\invest\invest.php | 23
+<?php exit;?>06-29 16:41:27 | 2 | include(D:\xampp\htdocs\phpcms\phpcms\modules\invest\templates\communist_list.tpl.php): failed to open stream: No such file or directory | phpcms\modules\invest\invest.php | 23
+<?php exit;?>06-29 16:41:27 | 2 | include(): Failed opening 'D:\xampp\htdocs\phpcms\phpcms\modules\invest\templates\communist_list.tpl.php' for inclusion (include_path='D:\xampp\php\PEAR') | phpcms\modules\invest\invest.php | 23
+<?php exit;?>06-30 11:31:53 | 2048 | Only variables should be passed by reference | phpcms\modules\member\index.php | 227
+<?php exit;?>07-04 15:28:39 | 2048 | Only variables should be passed by reference | phpcms\modules\member\index.php | 227

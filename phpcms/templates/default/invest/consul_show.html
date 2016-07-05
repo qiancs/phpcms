@@ -1,0 +1,140 @@
+{template "member", "header"}
+<div id="memberArea">
+    {template "member", "left"}
+    <div class="col-auto">
+        <div class="col-1">
+        <h6 class="title">{$title}</h6>
+            <div class="content">
+                    <table class="table_form" cellspacing="0" width="100%">
+                        <tr>
+                            <th width="150">姓名：</th>
+                            <td>{$row[name]}</td>
+                        </tr>
+                        <tr>
+                            <th width="150">现任（原任）职务：</th>
+                            <td>{$row[office]}</td>
+                        </tr>
+                        <tr>
+                            <th width="150">性别：</th>
+                            <td>
+                                {$row[sex]}
+                            </td>
+                        </tr>
+                        <tr>
+                            <th width="150">民族：</th>
+                            <td>
+                                {$row[nation]}
+                            </td>
+                        </tr>
+                        <tr>
+                            <th width="150">出生年月：</th>
+                            <td>
+                                {$row[birth]}
+                            </td>
+                        </tr>
+                        <tr>
+                            <th width="150">入党时间：</th>
+                            <td>
+                                {$row[party]}
+                            </td>
+                        </tr>
+                        {if $type == 6 }
+                        <tr>
+                            <th width="150">撤销资格时间：</th>
+                            <td>
+                                {$row[dismiss_consul_time]}
+                            </td>
+                        </tr>
+                        <tr>
+                            <th width="150">撤销资格原因：</th>
+                            <td>
+                                {$row[dismiss_consul_time]}
+                            </td>
+                        </tr>
+                        <tr>
+                            <th width="150">给予党纪处分情况：</th>
+                            <td>
+                                {$row[discip_measure]}
+                            </td>
+                        </tr>
+                        <tr>
+                            <th width="150">给予党纪处分时间：</th>
+                            <td>
+                                {$row[measure_time]}
+                            </td>
+                        </tr>
+                        <tr>
+                            <th width="150">给予组织处理情况：</th>
+                            <td>
+                                {$row[orga_sanction]}
+                            </td>
+                        </tr>
+                        <tr>
+                            <th width="150">给予组织处理时间：</th>
+                            <td>
+                                {$row[sanction_time]}
+                            </td>
+                        </tr>
+
+                        {elseif ($type == 7)}
+                        <tr>
+                            <th width="150">责令辞职时间：</th>
+                            <td>
+                                {$row[order_resign_time]}
+                            </td>
+                        </tr>
+                        <tr>
+                            <th width="150">责令辞职原因：</th>
+                            <td>
+                                {$row[dismiss_consul_reason]}
+                            </td>
+                        </tr>
+                        <tr>
+                            <th width="150">给予党纪处分情况：</th>
+                            <td>
+                                {$row[discip_measure]}
+                            </td>
+                        </tr>
+                        <tr>
+                            <th width="150">给予党纪处分时间：</th>
+                            <td>
+                                {$row[measure_time]}
+                            </td>
+                        </tr>
+                        <tr>
+                            <th width="150">给予组织处理情况：</th>
+                            <td>
+                                {$row[orga_sanction]}
+                            </td>
+                        </tr>
+                        <tr>
+                            <th width="150">给予组织处理时间：</th>
+                            <td>
+                                {$row[sanction_time]}
+                            </td>
+                        </tr>
+                        {else}
+                        <h1>无效的政协委员类型';</h1>
+                        {/if}
+
+                        <tr>
+                            <th width="150">担任本届哪一级代表职务：</th>
+                            <td>
+                                {$row[level]}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <input type="button" name="dosubmit" value="返回列表" onclick="history.back()" >
+                            </td>
+                        </tr>
+                    </table>
+
+            </div>
+
+        </div>
+    </div>
+
+</div>
+{template "member", "footer"}

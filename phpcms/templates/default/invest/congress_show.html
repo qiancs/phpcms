@@ -1,0 +1,112 @@
+{template "member", "header"}
+<div id="memberArea">
+    {template "member", "left"}
+    <div class="col-auto">
+        <div class="col-1">
+        <h6 class="title">{$title}</h6>
+            <div class="content">
+                    <table class="table_form" cellspacing="0" width="100%">
+                        <tr>
+                            <th width="150">姓名：</th>
+                            <td>{$row[name]}</td>
+                        </tr>
+                        <tr>
+                            <th width="150">现任（原任）职务：</th>
+                            <td>{$row[office]}</td>
+                        </tr>
+                        <tr>
+                            <th width="150">性别：</th>
+                            <td>{$row[sex]}</td>
+                        </tr>
+                        <tr>
+                            <th width="150">民族：</th>
+                            <td>{$row[nation]}</td>
+                        </tr>
+                        <tr>
+                            <th width="150">出生年月：</th>
+                            <td>{$row[birth]}</td>
+                        </tr>
+                        <tr>
+                            <th width="150">入党时间：</th>
+                            <td>
+                                {$row[party]}
+                            </td>
+                        </tr>
+                        {if $type == 3 }
+                        <tr>
+                            <th width="150">终止资格时间：</th>
+                            <td>
+                                {$row[abort_cong_time]}
+                            </td>
+                        </tr>
+                        <tr>
+                            <th width="150">终止人大代表职务原因：</th>
+                            <td>{$row[abort_cong_reason]}
+                            </td>
+                        </tr>
+                        <tr>
+                            <th width="150">给予党纪处分情况：</th>
+                            <td>
+                                {$row[discip_measure]}</textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th width="150">给予党纪处分时间：</th>
+                            <td>
+                                {$row[measure_time]}
+                            </td>
+                        </tr>
+                        <tr>
+                            <th width="150">给予组织处理情况：</th>
+                            <td>
+                                {$row[orga_sanction]}
+                            </td>
+                        </tr>
+                        <tr>
+                            <th width="150">给予组织处理时间：</th>
+                            <td>
+                                {$row[sanction_time]}
+                            </td>
+                        </tr>
+
+                        {else}
+                        <tr>
+                            <th width="150">停止职务原因：</th>
+                            <td>
+                                {form::select(array('涉嫌违纪违法被免去党政领导职务' => '涉嫌违纪违法被免去党政领导职务', '其他原因' => '其他原因'), '', 'name="stop_repre_reason"')}
+                            </td>
+                        </tr>
+                        <tr>
+                            <th width="150">是否停止职务：</th>
+                            <td>
+                                {form::radio(array('1' => '是', '0' => '否'), '是', 'name="is_stop"')}
+                            </td>
+                        </tr>
+                        <tr>
+                            <th width="150">停止职务时间：</th>
+                            <td>
+                                {form::date('stop_repre_time')}
+                            </td>
+                        </tr>
+                        {/if}
+
+                        <tr>
+                            <th width="150">担任本届哪一级代表职务：</th>
+                            <td>{$row[level]}</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <input type="hidden" value="{$type}" name="type">
+                                <input type="button" value="返回列表" onclick="history.back(-1);">
+                            </td>
+                        </tr>
+                    </table>
+
+            </div>
+
+        </div>
+    </div>
+
+</div>
+{template "member", "footer"}

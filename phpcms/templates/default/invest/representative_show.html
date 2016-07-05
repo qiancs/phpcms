@@ -1,0 +1,104 @@
+{template "member", "header"}
+<div id="memberArea">
+    {template "member", "left"}
+    <div class="col-auto">
+        <div class="col-1">
+        <h6 class="title">{$title}</h6>
+            <div class="content">
+                <form action="?m=invest&c=representative&a=insert" method="post">
+                    <table class="table_form" cellspacing="0" width="100%">
+                        <tr>
+                            <th width="150">姓名：</th>
+                            <td>{$row[name]}</td>
+                        </tr>
+                        <tr>
+                            <th width="150">现任（原任）职务：</th>
+                            <td>{$row[office]}</td>
+                        </tr>
+                        <tr>
+                            <th width="150">性别：</th>
+                            <td>
+                                {$row[sex]}
+                            </td>
+                        </tr>
+                        <tr>
+                            <th width="150">民族：</th>
+                            <td>
+                                {$row[nation]}
+                            </td>
+                        </tr>
+                        <tr>
+                            <th width="150">出生年月：</th>
+                            <td>
+                                {$row[birth]}
+                            </td>
+                        </tr>
+                        <tr>
+                            <th width="150">入党时间：</th>
+                            <td>
+                                {$row[party]}
+                            </td>
+                        </tr>
+                        {if $type == 1 }
+                        <tr>
+                            <th width="150">终止资格原因：</th>
+                            <td>
+                                {$row[abort_repre_reason]}
+                            </td>
+                        </tr>
+                        <tr>
+                            <th width="150">是否终止资格：</th>
+                            <td>
+                                {$row[is_abort]}
+                            </td>
+                        </tr>
+                        <tr>
+                            <th width="150">终止资格时间：</th>
+                            <td>
+                                {$row[abort_repre_time]}
+                            </td>
+                        </tr>
+                        {else}
+                        <tr>
+                            <th width="150">停止职务原因：</th>
+                            <td>
+                                {$row[stop_repre_reason]}
+                            </td>
+                        </tr>
+                        <tr>
+                            <th width="150">是否停止职务：</th>
+                            <td>
+                                {$row[is_stop]}
+                            </td>
+                        </tr>
+                        <tr>
+                            <th width="150">停止职务时间：</th>
+                            <td>
+                                {$row[stop_repre_time]}
+                            </td>
+                        </tr>
+                        {/if}
+
+                        <tr>
+                            <th width="150">担任本届哪一级代表职务：</th>
+                            <td>
+                                {$row[level]}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <input type="hidden" value="{$type}" name="type">
+                                <input type="submit" name="dosubmit" value="返回列表" onclick="history.back(-1);">
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+
+            </div>
+
+        </div>
+    </div>
+
+</div>
+{template "member", "footer"}
