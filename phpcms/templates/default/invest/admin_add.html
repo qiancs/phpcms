@@ -12,6 +12,9 @@
         $("#nation").formValidator({onshow:"{L('input') . L('nation')}",onfocus:"{L('nation') . L('cannot_empty')}"}).inputValidator({min: 1, onerror:"{L('nation') . L('cannot_empty')}"});
         $("#birth").formValidator({onshow:"{L('input') . L('birth')}",onfocus:"{L('birth') . L('cannot_empty')}"}).inputValidator({min: 1, onerror:"{L('birth') . L('cannot_empty')}"});
         $("#party").formValidator({onshow:"{L('input') . L('party')}",onfocus:"{L('party') . L('cannot_empty')}"}).inputValidator({min: 1, onerror:"{L('party') . L('cannot_empty')}"});
+        $("#admin_penalty_reason").formValidator({onshow:"{L('input')}",onfocus:"{L('cannot_empty')}"}).inputValidator({min: 1, onerror:"{L('cannot_empty')}"});
+        $("#admin_penalty_detail").formValidator({onshow:"{L('input')}",onfocus:"{L('cannot_empty')}"}).inputValidator({min: 1, onerror:"{L('cannot_empty')}"});
+        $("#admin_penalty_time").formValidator({onshow:"{L('input')}",onfocus:"{L('cannot_empty')}"}).inputValidator({min: 1, onerror:"{L('cannot_empty')}"});
 
     });
 
@@ -74,13 +77,13 @@
                                 {form::select(array('因涉黄受行政处罚' => '因涉黄受行政处罚',
                                 '因涉赌受行政处罚' => '因涉赌受行政处罚',
                                 '因涉毒受行政处罚' => '因涉毒受行政处罚',
-                                '其他原因' => '其他原因'), '', 'name="admin_penalty_reason"', '请选择')}
+                                '其他原因' => '其他原因'), '', 'name="admin_penalty_reason" id="admin_penalty_reason"', '请选择')}
                             </td>
                         </tr>
                         <tr>
                             <th width="150">行政处罚情况：</th>
                             <td>
-                                <textarea name="admin_penalty_detail" rows="2" cols="50"></textarea>
+                                <textarea name="admin_penalty_detail" id="admin_penalty_detail" rows="2" cols="50"></textarea>
                             </td>
                         </tr>
                         <tr>

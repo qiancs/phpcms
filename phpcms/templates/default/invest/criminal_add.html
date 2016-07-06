@@ -2,7 +2,7 @@
 <script language="JavaScript">
     <!--
     $(function(){
-        $.formValidator.initConfig({autotip:true,formid:"adminform",onerror:function(msg){}});
+        $.formValidator.initConfig({autotip:true,formid:"criminalform",onerror:function(msg){}});
 
         $("#name").formValidator({onshow:"{L('input') . L('name')}",onfocus:"{L('name') . L('cannot_empty')}"}).inputValidator({min: 1, onerror:"{L('name') . L('cannot_empty')}"});
         $("#identity").formValidator({onshow:"{L('input') . L('identity')}",onfocus:"{L('identity') . L('cannot_empty')}"}).inputValidator({min: 1, onerror:"{L('identity') . L('cannot_empty')}"});
@@ -12,7 +12,9 @@
         $("#nation").formValidator({onshow:"{L('input') . L('nation')}",onfocus:"{L('nation') . L('cannot_empty')}"}).inputValidator({min: 1, onerror:"{L('nation') . L('cannot_empty')}"});
         $("#birth").formValidator({onshow:"{L('input') . L('birth')}",onfocus:"{L('birth') . L('cannot_empty')}"}).inputValidator({min: 1, onerror:"{L('birth') . L('cannot_empty')}"});
         $("#party").formValidator({onshow:"{L('input') . L('party')}",onfocus:"{L('party') . L('cannot_empty')}"}).inputValidator({min: 1, onerror:"{L('party') . L('cannot_empty')}"});
-
+        $("#criminal_penalty_reason").formValidator({onshow:"{L('input')}",onfocus:"{L('cannot_empty')}"}).inputValidator({min: 1, onerror:"{L('cannot_empty')}"});
+        $("#criminal_penalty_detail").formValidator({onshow:"{L('input')}",onfocus:"{L('cannot_empty')}"}).inputValidator({min: 1, onerror:"{L('cannot_empty')}"});
+        $("#criminal_penalty_time").formValidator({onshow:"{L('input')}",onfocus:"{L('cannot_empty')}"}).inputValidator({min: 1, onerror:"{L('cannot_empty')}"});
     });
 
     //-->
@@ -23,7 +25,7 @@
         <div class="col-1">
         <h6 class="title">{$title}</h6>
             <div class="content">
-                <form action="?m=invest&c=admin&a=insert" method="post" id="adminform">
+                <form action="?m=invest&c=criminal&a=insert" method="post" id="criminalform">
                     <table class="table_form" cellspacing="0" width="100%">
                         <tr>
                             <th width="150">姓名：</th>
@@ -74,13 +76,13 @@
                                 {form::select(array('司法机关的生效判决' => '司法机关的生效判决',
                                 '司法机关的裁定' => '司法机关的裁定',
                                 '司法机关的决定' => '司法机关的决定',
-                                '其他原因' => '其他原因'), '', 'name="criminal_penalty_reason"')}
+                                '其他原因' => '其他原因'), '', 'name="criminal_penalty_reason" id="criminal_penalty_reason"', '请选择')}
                             </td>
                         </tr>
                         <tr>
                             <th width="150">刑责追究情况：</th>
                             <td>
-                                <textarea name="criminal_penalty_detail" rows="2" cols="50"></textarea>
+                                <textarea name="criminal_penalty_detail" id="criminal_penalty_detail" rows="2" cols="50"></textarea>
                             </td>
                         </tr>
                         <tr>
@@ -121,13 +123,13 @@
                                 {form::select(array('犯罪情节轻微' => '犯罪情节轻微',
                                 '依法不需判处刑罚' => '依法不需判处刑罚',
                                 '依法免除刑罚' => '依法免除刑罚',
-                                '其他原因' => '其他原因'), '', 'name="criminal_penalty_reason"')}
+                                '其他原因' => '其他原因'), '', 'name="criminal_penalty_reason" id="criminal_penalty_reason"', '请选择')}
                             </td>
                         </tr>
                         <tr>
                             <th width="150">刑责追究情况：</th>
                             <td>
-                                <textarea name="criminal_penalty_detail" rows="2" cols="50"></textarea>
+                                <textarea name="criminal_penalty_detail" id="criminal_penalty_detail" rows="2" cols="50"></textarea>
                             </td>
                         </tr>
                         <tr>

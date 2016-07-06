@@ -12,6 +12,9 @@
         $("#nation").formValidator({onshow:"<?php echo L('input') . L('nation');?>",onfocus:"<?php echo L('nation') . L('cannot_empty');?>"}).inputValidator({min: 1, onerror:"<?php echo L('nation') . L('cannot_empty');?>"});
         $("#birth").formValidator({onshow:"<?php echo L('input') . L('birth');?>",onfocus:"<?php echo L('birth') . L('cannot_empty');?>"}).inputValidator({min: 1, onerror:"<?php echo L('birth') . L('cannot_empty');?>"});
         $("#party").formValidator({onshow:"<?php echo L('input') . L('party');?>",onfocus:"<?php echo L('party') . L('cannot_empty');?>"}).inputValidator({min: 1, onerror:"<?php echo L('party') . L('cannot_empty');?>"});
+        $("#admin_penalty_reason").formValidator({onshow:"<?php echo L('input');?>",onfocus:"<?php echo L('cannot_empty');?>"}).inputValidator({min: 1, onerror:"<?php echo L('cannot_empty');?>"});
+        $("#admin_penalty_detail").formValidator({onshow:"<?php echo L('input');?>",onfocus:"<?php echo L('cannot_empty');?>"}).inputValidator({min: 1, onerror:"<?php echo L('cannot_empty');?>"});
+        $("#admin_penalty_time").formValidator({onshow:"<?php echo L('input');?>",onfocus:"<?php echo L('cannot_empty');?>"}).inputValidator({min: 1, onerror:"<?php echo L('cannot_empty');?>"});
 
     });
 
@@ -74,13 +77,13 @@
                                 <?php echo form::select(array('因涉黄受行政处罚' => '因涉黄受行政处罚',
                                 '因涉赌受行政处罚' => '因涉赌受行政处罚',
                                 '因涉毒受行政处罚' => '因涉毒受行政处罚',
-                                '其他原因' => '其他原因'), '', 'name="admin_penalty_reason"', '请选择');?>
+                                '其他原因' => '其他原因'), '', 'name="admin_penalty_reason" id="admin_penalty_reason"', '请选择');?>
                             </td>
                         </tr>
                         <tr>
                             <th width="150">行政处罚情况：</th>
                             <td>
-                                <textarea name="admin_penalty_detail" rows="2" cols="50"></textarea>
+                                <textarea name="admin_penalty_detail" id="admin_penalty_detail" rows="2" cols="50"></textarea>
                             </td>
                         </tr>
                         <tr>

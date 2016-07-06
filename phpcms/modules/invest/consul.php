@@ -55,7 +55,7 @@ class consul extends foreground
         $memberinfo = $this->memberinfo;
         unset($_POST[dosubmit]);
         $_POST[userid] = $memberinfo[userid];
-        $_POST[organization] = $memberinfo[organization];
+        //$_POST[organization] = $memberinfo[organization];
         $_POST[insert_time] = date('Y-m-d H:i:s', SYS_TIME);
         if($this->comm_db->insert($_POST)) {
             showmessage('添加成功', '?m=invest&c=consul&a=index');
@@ -77,6 +77,7 @@ class consul extends foreground
             showmessage('未知类型的政协委员', '?m=invest&c=consul&a=index');
         }
         //include $this->admin_tpl('modify');
+        $show_validator = $show_scroll = $show_header = true;
         include template('invest', 'consul_modify');    }
 
     function update() {

@@ -2,7 +2,7 @@
 <script language="JavaScript">
     <!--
     $(function(){
-        $.formValidator.initConfig({autotip:true,formid:"adminform",onerror:function(msg){}});
+        $.formValidator.initConfig({autotip:true,formid:"representativeform",onerror:function(msg){}});
 
         $("#name").formValidator({onshow:"<?php echo L('input') . L('name');?>",onfocus:"<?php echo L('name') . L('cannot_empty');?>"}).inputValidator({min: 1, onerror:"<?php echo L('name') . L('cannot_empty');?>"});
         $("#identity").formValidator({onshow:"<?php echo L('input') . L('identity');?>",onfocus:"<?php echo L('identity') . L('cannot_empty');?>"}).inputValidator({min: 1, onerror:"<?php echo L('identity') . L('cannot_empty');?>"});
@@ -12,7 +12,12 @@
         $("#nation").formValidator({onshow:"<?php echo L('input') . L('nation');?>",onfocus:"<?php echo L('nation') . L('cannot_empty');?>"}).inputValidator({min: 1, onerror:"<?php echo L('nation') . L('cannot_empty');?>"});
         $("#birth").formValidator({onshow:"<?php echo L('input') . L('birth');?>",onfocus:"<?php echo L('birth') . L('cannot_empty');?>"}).inputValidator({min: 1, onerror:"<?php echo L('birth') . L('cannot_empty');?>"});
         $("#party").formValidator({onshow:"<?php echo L('input') . L('party');?>",onfocus:"<?php echo L('party') . L('cannot_empty');?>"}).inputValidator({min: 1, onerror:"<?php echo L('party') . L('cannot_empty');?>"});
-
+        $("#abort_repre_reason").formValidator({onshow:"<?php echo L('input');?>",onfocus:"<?php echo L('cannot_empty');?>"}).inputValidator({min: 1, onerror:"<?php echo L('cannot_empty');?>"});
+        $(":radio[name='is_abort']").formValidator({onshow:"<?php echo L('input');?>",onfocus:"<?php echo L('cannot_empty');?>"}).inputValidator({min: 1, onerror:"<?php echo L('cannot_empty');?>"});
+        $("#abort_repre_time").formValidator({onshow:"<?php echo L('input');?>",onfocus:"<?php echo L('cannot_empty');?>"}).inputValidator({min: 1, onerror:"<?php echo L('cannot_empty');?>"});
+        $("#stop_repre_reason").formValidator({onshow:"<?php echo L('input');?>",onfocus:"<?php echo L('cannot_empty');?>"}).inputValidator({min: 1, onerror:"<?php echo L('cannot_empty');?>"});
+        $(":radio[name='is_stop']").formValidator({onshow:"<?php echo L('input');?>",onfocus:"<?php echo L('cannot_empty');?>"}).inputValidator({min: 1, onerror:"<?php echo L('cannot_empty');?>"});
+        $("#stop_repre_time").formValidator({onshow:"<?php echo L('input');?>",onfocus:"<?php echo L('cannot_empty');?>"}).inputValidator({min: 1, onerror:"<?php echo L('cannot_empty');?>"});
     });
 
     //-->
@@ -23,7 +28,7 @@
         <div class="col-1">
         <h6 class="title"><?php echo $title;?></h6>
             <div class="content">
-                <form action="?m=invest&c=admin&a=insert" method="post" id="adminform">
+                <form action="?m=invest&c=representative&a=insert" method="post" id="representativeform">
                     <table class="table_form" cellspacing="0" width="100%">
                         <tr>
                             <th width="150">姓名：</th>
@@ -79,7 +84,7 @@
                         <tr>
                             <th width="150">是否终止资格：</th>
                             <td>
-                                <?php echo form::radio(array('1' => '是', '0' => '否'), '是', 'id="is_abort" name="is_abort"', '请选择');?>
+                                <?php echo form::radio(array('1' => '是', '0' => '否'), '是', 'name="is_abort"', '请选择');?>
                             </td>
                         </tr>
                         <tr>
@@ -88,7 +93,7 @@
                                 <?php echo form::date('abort_repre_time');?>
                             </td>
                         </tr>
-                        <?php } else { ?>
+                        <?php } elseif ($type == 2) { ?>
                         <tr>
                             <th width="150">停止职务原因：</th>
                             <td>

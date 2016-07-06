@@ -2,7 +2,7 @@
 <script language="JavaScript">
     <!--
     $(function(){
-        $.formValidator.initConfig({autotip:true,formid:"adminform",onerror:function(msg){}});
+        $.formValidator.initConfig({autotip:true,formid:"congform",onerror:function(msg){}});
 
         $("#name").formValidator({onshow:"<?php echo L('input') . L('name');?>",onfocus:"<?php echo L('name') . L('cannot_empty');?>"}).inputValidator({min: 1, onerror:"<?php echo L('name') . L('cannot_empty');?>"});
         $("#identity").formValidator({onshow:"<?php echo L('input') . L('identity');?>",onfocus:"<?php echo L('identity') . L('cannot_empty');?>"}).inputValidator({min: 1, onerror:"<?php echo L('identity') . L('cannot_empty');?>"});
@@ -12,6 +12,11 @@
         $("#nation").formValidator({onshow:"<?php echo L('input') . L('nation');?>",onfocus:"<?php echo L('nation') . L('cannot_empty');?>"}).inputValidator({min: 1, onerror:"<?php echo L('nation') . L('cannot_empty');?>"});
         $("#birth").formValidator({onshow:"<?php echo L('input') . L('birth');?>",onfocus:"<?php echo L('birth') . L('cannot_empty');?>"}).inputValidator({min: 1, onerror:"<?php echo L('birth') . L('cannot_empty');?>"});
         $("#party").formValidator({onshow:"<?php echo L('input') . L('party');?>",onfocus:"<?php echo L('party') . L('cannot_empty');?>"}).inputValidator({min: 1, onerror:"<?php echo L('party') . L('cannot_empty');?>"});
+        $("#abort_cong_time").formValidator({onshow:"<?php echo L('input') . L('party');?>",onfocus:"<?php echo L('party') . L('cannot_empty');?>"}).inputValidator({min: 1, onerror:"<?php echo L('party') . L('cannot_empty');?>"});
+        $("#abort_cong_reason").formValidator({onshow:"<?php echo L('input');?>",onfocus:"<?php echo L('cannot_empty');?>"}).inputValidator({min: 1, onerror:"<?php echo L('cannot_empty');?>"});
+        $("#stop_cong_time").formValidator({onshow:"<?php echo L('input');?>",onfocus:"<?php echo L('cannot_empty');?>"}).inputValidator({min: 1, onerror:"{ L('cannot_empty')}"});
+        $("#invalid_elect_time").formValidator({onshow:"<?php echo L('input');?>",onfocus:"<?php echo L('cannot_empty');?>"}).inputValidator({min: 1, onerror:"<?php echo L('cannot_empty');?>"});
+        $("#level").formValidator({onshow:"<?php echo L('input');?>",onfocus:"<?php echo L('cannot_empty');?>"}).inputValidator({min: 1, onerror:"<?php echo L('cannot_empty');?>"});
 
     });
 
@@ -23,7 +28,7 @@
         <div class="col-1">
         <h6 class="title"><?php echo $title;?></h6>
             <div class="content">
-                <form action="?m=invest&c=admin&a=insert" method="post" id="adminform">
+                <form action="?m=invest&c=congress&a=insert" method="post" id="congform">
                     <table class="table_form" cellspacing="0" width="100%">
                         <tr>
                             <th width="150">姓名：</th>
@@ -81,7 +86,7 @@
                                 '因涉嫌违纪被责令辞职' => '因涉嫌违纪被责令辞职',
                                 '因违反社会道德被责令辞职' => '因违反社会道德被责令辞职',
                                 '丧失国籍' => '丧失国籍',
-                                '其他原因' => '其他原因'), '', 'name="abort_cong_reason"');?>
+                                '其他原因' => '其他原因'), '', 'name="abort_cong_reason" id="abort_cong_reason"', '请选择');?>
                             </td>
                         </tr>
                         <tr>
@@ -179,7 +184,7 @@
                             <th width="150">担任本届哪一级代表职务：</th>
                             <td>
                                 <?php echo form::select(array('全国人大代表' => '全国人大代表', '省人大代表' => '省人大代表', '市人大代表' => '市人大代表',
-                                '县人大代表' => '县人大代表', '乡镇人大代表' => '乡镇人大代表'), '', 'name="level"', '请选择');?>
+                                '县人大代表' => '县人大代表', '乡镇人大代表' => '乡镇人大代表'), '', 'name="level" id="level"', '请选择');?>
                             </td>
                         </tr>
                         <tr>
