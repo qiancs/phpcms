@@ -9,6 +9,12 @@
         <li <?php if(ROUTE_A == "invest" && ROUTE_C == "admin") { ?> class="on"<?php } ?>><a href="?m=invest&c=admin&a=index"><img src="<?php echo IMG_PATH;?>icon/user_edit.png" width="15" height="16" />行政处罚党员排查</a> </li>
     </ul>
     <?php } ?>
+    <?php if(module_exists('invest')) { ?>
+    <h5 class="title"><img src="<?php echo IMG_PATH;?>icon/m_1.png" width="15" height="15" />组织管理</h5>
+    <ul>
+        <li <?php if(ROUTE_A == "invest" && ROUTE_C == "organization") { ?> class="on"<?php } ?>><a href="?m=invest&c=organization&a=index"><img src="<?php echo IMG_PATH;?>icon/m_3.png" width="15" height="16" />下属党组织</a> </li>
+    </ul>
+    <?php } ?>
     <h5 class="title"><img src="<?php echo IMG_PATH;?>icon/m_1.png" width="15" height="15" /> <?php echo L('manage_center');?></h5>
             <ul>
        	    <li <?php if(ROUTE_A=="publish") { ?> class="on"<?php } ?>><a href="index.php?m=member&c=content&a=publish"><img src="<?php echo IMG_PATH;?>icon/m_2.png" width="14" height="15" /> <?php echo L('online_publish');?></a></li>
