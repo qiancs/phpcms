@@ -275,6 +275,7 @@ function show_protocol() {
         <div class="input"><label><?php echo L('email');?>：</label><input type="text" id="email" name="email" size="36" class="input-text"></div>
 		<div class="input"><label><?php echo L('nickname');?>：</label><input type="text" id="nickname" name="nickname" size="36" class="input-text"></div>
 		<div class="input"><label><?php echo L('organization');?>：</label><input type="text" id="organization" name="organization" size="36" class="input-text"></div>
+		<div class="input"><label>上级党委：</label><?php echo form::select($organizations, '', 'id="parentid" name="parentid"', '请选择');?></div>
 		<?php if($member_setting['choosemodel']) { ?>
 			<!--是否开启选择会员模型选项-->
 			<script language="JavaScript">

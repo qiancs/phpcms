@@ -67,7 +67,7 @@ class index extends foreground {
 			$userinfo['email'] = (isset($_POST['email']) && is_email($_POST['email'])) ? $_POST['email'] : exit('0');
 			$userinfo['password'] = (isset($_POST['password']) && is_badword($_POST['password'])==false) ? $_POST['password'] : exit('0');
 			
-			$userinfo['email'] = (isset($_POST['email']) && is_email($_POST['email'])) ? $_POST['email'] : exit('0');
+			$userinfo['organization'] = (isset($_POST['organization'])) ? $_POST['organization'] : exit('0');
 
 			$userinfo['modelid'] = isset($_POST['modelid']) ? intval($_POST['modelid']) : 10;
 			$userinfo['regip'] = ip();
@@ -198,7 +198,11 @@ class index extends foreground {
 			if(!pc_base::load_config('system', 'phpsso')) {
 				showmessage(L('enable_register').L('enable_phpsso'), 'index.php?m=member&c=index&a=login');
 			}
-			
+
+			$rows = $this->db->select('', 'userid, organization');
+			foreach($rows as $row) {
+				$organizations[$row[userid]] = $row[organization];
+			}
 			if(!empty($_GET['verify'])) {
 				$code = isset($_GET['code']) ? trim($_GET['code']) : showmessage(L('operation_failure'), 'index.php?m=member&c=index');
 				$code_res = sys_auth($code, 'DECODE', get_auth_key('email'));

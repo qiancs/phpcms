@@ -51,6 +51,10 @@ $(function(){
 						<th width="100"><?php echo L('nickname');?></th> 
 						<td><input id="nickname" name="nickname" value="<?php echo $memberinfo['nickname'];?>" type="text" class="input-text" size="30"></td>
 					</tr>
+					<tr>
+						<th width="100"><?php echo L('organization');?></th>
+						<td><input id="organization" name="organization" value="<?php echo $memberinfo['organization'];?>" type="text" class="input-text" size="30"></td>
+					</tr>
 
 					<?php $n=1; if(is_array($forminfos)) foreach($forminfos AS $k => $v) { ?>
 					<tr>

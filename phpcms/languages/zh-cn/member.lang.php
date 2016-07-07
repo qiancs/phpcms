@@ -3,7 +3,7 @@
 $LANG['email'] = '邮箱';
 $LANG['or'] = '或者';
 $LANG['nickname'] = '真实姓名';
-$LANG['organization'] = '所在单位';
+$LANG['organization'] = '所在党委';
 $LANG['uid'] = '用户ID';
 $LANG['regtime'] = '注册时间';
 $LANG['lastlogintime'] = '最后登录';

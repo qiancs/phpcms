@@ -51,6 +51,10 @@ $(function(){
 						<th width="100">{L('nickname')}</th> 
 						<td><input id="nickname" name="nickname" value="{$memberinfo['nickname']}" type="text" class="input-text" size="30"></td>
 					</tr>
+					<tr>
+						<th width="100">{L('organization')}</th>
+						<td><input id="organization" name="organization" value="{$memberinfo['organization']}" type="text" class="input-text" size="30"></td>
+					</tr>
 
 					{loop $forminfos $k $v}
 					<tr>
