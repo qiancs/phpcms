@@ -236,6 +236,7 @@ class member extends admin {
 		foreach($memberlist_arr as $k=>$v) {
 			$memberlist[$k] = $v;
 			$memberlist[$k]['avatar'] = get_memberavatar($v['phpssouid']);
+			$memberlist[$k]['parent'] = get_parent_by_id($v['parentid']);
 		}
 
 		$big_menu = array('javascript:window.top.art.dialog({id:\'add\',iframe:\'?m=member&c=member&a=add\', title:\''.L('member_add').'\', width:\'700\', height:\'500\', lock:true}, function(){var d = window.top.art.dialog({id:\'add\'}).data.iframe;var form = d.document.getElementById(\'dosubmit\');form.click();return false;}, function(){window.top.art.dialog({id:\'add\'}).close()});void(0);', L('member_add'));

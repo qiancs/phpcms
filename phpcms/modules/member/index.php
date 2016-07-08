@@ -68,7 +68,8 @@ class index extends foreground {
 			$userinfo['password'] = (isset($_POST['password']) && is_badword($_POST['password'])==false) ? $_POST['password'] : exit('0');
 			
 			$userinfo['organization'] = (isset($_POST['organization'])) ? $_POST['organization'] : exit('0');
-
+			$parentid = isset($_POST['parentid'])? intval(trim($_POST['parentid'])) : 0;
+			$userinfo['parentid'] = $parentid;
 			$userinfo['modelid'] = isset($_POST['modelid']) ? intval($_POST['modelid']) : 10;
 			$userinfo['regip'] = ip();
 			$userinfo['point'] = $member_setting['defualtpoint'] ? $member_setting['defualtpoint'] : 0;
@@ -401,12 +402,19 @@ class index extends foreground {
 	}
 	
 	public function account_manage_info() {
+		$rows = $this->db->select('', 'userid, organization');
+		foreach($rows as $row) {
+			$organizations[$row[userid]] = $row[organization];
+		}
 		if(isset($_POST['dosubmit'])) {
 			//更新用户昵称
 			$nickname = isset($_POST['nickname']) && is_username(trim($_POST['nickname'])) ? trim($_POST['nickname']) : '';
+			$organization = isset($_POST['organization']) && is_username(trim($_POST['organization'])) ? trim($_POST['organization']) : '';
+			$parentid = isset($_POST['parentid']) && is_int(trim($_POST['parentid'])) ? intval(trim($_POST['parentid'])) : 0;
 			$nickname = safe_replace($nickname);
+			$organization = safe_replace($organization);
 			if($nickname) {
-				$this->db->update(array('nickname'=>$nickname), array('userid'=>$this->memberinfo['userid']));
+				$this->db->update(array('nickname'=>$nickname, 'organization' => $organization, 'parentid' => $parentid), array('userid'=>$this->memberinfo['userid']));
 				if(!isset($cookietime)) {
 					$get_cookietime = param::get_cookie('cookietime');
 				}
@@ -454,7 +462,7 @@ class index extends foreground {
 					}
 				}
 			}
-						
+
 			$formValidator = $member_form->formValidator;
 
 			include template('member', 'account_manage_info');

@@ -55,6 +55,10 @@ $(function(){
 						<th width="100">{L('organization')}</th>
 						<td><input id="organization" name="organization" value="{$memberinfo['organization']}" type="text" class="input-text" size="30"></td>
 					</tr>
+					<tr>
+						<th width="100">{L('organization')}</th>
+						<td>{form::select($organizations, $memberinfo['parentid'], 'id="parentid" name="parentid"', '请选择')}</td>
+					</tr>
 
 					{loop $forminfos $k $v}
 					<tr>

@@ -82,6 +82,7 @@ class member_verify extends admin {
 					$info['username'] = $v['username'];
 					$info['nickname'] = $v['nickname'];
 					$info['organization'] = $v['organization'];
+					$info['parentid'] = $v['parentid'];
 					$info['email'] = $v['email'];
 					$info['regip'] = $v['regip'];
 					$info['point'] = $v['point'];

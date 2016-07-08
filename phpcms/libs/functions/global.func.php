@@ -965,6 +965,11 @@ function get_memberinfo_buyusername($username, $field='') {
 	}
 }
 
+function get_parent_by_id($parentid = 0) {
+	$member_db = pc_base::load_model('member_model');
+	$memberinfo = $member_db->get_one(array('userid' => $parentid));
+	return $memberinfo['organization'];
+}
 /**
  * 获取用户头像，建议传入phpssouid
  * @param $uid 默认为phpssouid

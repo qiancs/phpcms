@@ -55,6 +55,10 @@ $(function(){
 						<th width="100"><?php echo L('organization');?></th>
 						<td><input id="organization" name="organization" value="<?php echo $memberinfo['organization'];?>" type="text" class="input-text" size="30"></td>
 					</tr>
+					<tr>
+						<th width="100"><?php echo L('organization');?></th>
+						<td><?php echo form::select($organizations, $memberinfo['parentid'], 'id="parentid" name="parentid"', '请选择');?></td>
+					</tr>
 
 					<?php $n=1; if(is_array($forminfos)) foreach($forminfos AS $k => $v) { ?>
 					<tr>
