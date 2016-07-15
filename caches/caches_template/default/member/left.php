@@ -14,9 +14,9 @@
     <ul>
         <li <?php if(ROUTE_A == "invest" && ROUTE_C == "representative") { ?> class="on"<?php } ?>><a href="?m=organization&c=summary&a=representative"><img src="<?php echo IMG_PATH;?>icon/user_edit.png" width="15" height="16" />党代表统计</a> </li>
         <li <?php if(ROUTE_A == "invest" && ROUTE_C == "congress") { ?> class="on"<?php } ?>><a href="?m=organization&c=summary&a=congress"><img src="<?php echo IMG_PATH;?>icon/user_edit.png" width="15" height="16" />人大代表统计</a> </li>
-        <li <?php if(ROUTE_A == "invest" && ROUTE_C == "consult") { ?> class="on"<?php } ?>><a href="?m=invest&c=consul&a=index"><img src="<?php echo IMG_PATH;?>icon/user_edit.png" width="15" height="16" />政协委员统计</a> </li>
-        <li <?php if(ROUTE_A == "invest" && ROUTE_C == "criminal") { ?> class="on"<?php } ?>><a href="?m=invest&c=criminal&a=index"><img src="<?php echo IMG_PATH;?>icon/user_edit.png" width="15" height="16" />刑责追究党员统计</a> </li>
-        <li <?php if(ROUTE_A == "invest" && ROUTE_C == "admin") { ?> class="on"<?php } ?>><a href="?m=invest&c=admin&a=index"><img src="<?php echo IMG_PATH;?>icon/user_edit.png" width="15" height="16" />行政处罚党员统计</a> </li>
+        <li <?php if(ROUTE_A == "invest" && ROUTE_C == "consult") { ?> class="on"<?php } ?>><a href="?m=organization&c=summary&a=consul"><img src="<?php echo IMG_PATH;?>icon/user_edit.png" width="15" height="16" />政协委员统计</a> </li>
+        <li <?php if(ROUTE_A == "invest" && ROUTE_C == "criminal") { ?> class="on"<?php } ?>><a href="?m=organization&c=summary&a=criminal"><img src="<?php echo IMG_PATH;?>icon/user_edit.png" width="15" height="16" />刑责追究党员统计</a> </li>
+        <li <?php if(ROUTE_A == "invest" && ROUTE_C == "admin") { ?> class="on"<?php } ?>><a href="?m=organization&c=summary&a=admin"><img src="<?php echo IMG_PATH;?>icon/user_edit.png" width="15" height="16" />行政处罚党员统计</a> </li>
     </ul>
     <?php } ?>
     <h5 class="title"><img src="<?php echo IMG_PATH;?>icon/m_1.png" width="15" height="15" /> <?php echo L('manage_center');?></h5>

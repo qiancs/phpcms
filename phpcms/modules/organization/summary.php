@@ -172,6 +172,16 @@ class summary extends foreground
 			$this->comm_db->count("userid=$userid and " . 'type in (3, 4, 5) and (sanction_time = "0000-00-00" or sanction_time > "2016-06-20") and level="市人大代表"'),
 			$this->comm_db->count("userid=$userid and " . 'type in (3, 4, 5) and (sanction_time = "0000-00-00" or sanction_time > "2016-06-20") and level="县人大代表"'),
 			$this->comm_db->count("userid=$userid and " . 'type in (3, 4, 5) and (sanction_time = "0000-00-00" or sanction_time > "2016-06-20") and level="乡镇人大代表"'));
+		$row[result1] = array($this->comm_db->count("userid=$userid and " . 'type in (3, 4, 5) and  measure_time > "2016-06-20" and level="全国人大代表"'),
+			$this->comm_db->count("userid=$userid and " . 'type in (3, 4, 5) and measure_time > "2016-06-20" and level="省人大代表"'),
+			$this->comm_db->count("userid=$userid and " . 'type in (3, 4, 5) and measure_time > "2016-06-20" and level="市人大代表"'),
+			$this->comm_db->count("userid=$userid and " . 'type in (3, 4, 5) and measure_time > "2016-06-20" and level="县人大代表"'),
+			$this->comm_db->count("userid=$userid and " . 'type in (3, 4, 5) and measure_time > "2016-06-20" and level="乡镇人大代表"'));
+		$row[result2] = array($this->comm_db->count("userid=$userid and " . 'type in (3, 4, 5) and  sanction_time > "2016-06-20" and level="全国人大代表"'),
+			$this->comm_db->count("userid=$userid and " . 'type in (3, 4, 5) and sanction_time > "2016-06-20" and level="省人大代表"'),
+			$this->comm_db->count("userid=$userid and " . 'type in (3, 4, 5) and sanction_time > "2016-06-20" and level="市人大代表"'),
+			$this->comm_db->count("userid=$userid and " . 'type in (3, 4, 5) and sanction_time > "2016-06-20" and level="县人大代表"'),
+			$this->comm_db->count("userid=$userid and " . 'type in (3, 4, 5) and sanction_time > "2016-06-20" and level="乡镇人大代表"'));
 		include template('organization', 'congress_summary');
 	}
 
@@ -179,15 +189,42 @@ class summary extends foreground
 	{
 		$userid = $this->memberinfo['userid'];
 		$row = $this->orga_db->get_one(array('userid' => $userid));
-		if (isset($_POST['dosubmit'])) {
-			unset($_POST['dosubmit']);
-			if ($row) {
-				$this->orga_db->update($_POST, array('userid' => $userid));
-			} else {
-				$this->orga_db->insert($_POST);
-			}
-			showmessage(L('operation_success'), HTTP_REFERER);
-		}
+		$row[dismiss1] = array($this->comm_db->count("userid=$userid and " . 'dismiss_consul_reason="因涉嫌违纪违法被撤销资格" and level="全国政协委员"'),
+			$this->comm_db->count("userid=$userid and " . 'dismiss_consul_reason="因涉嫌违纪违法被撤销资格" and level="省政协委员"'),
+			$this->comm_db->count("userid=$userid and " . 'dismiss_consul_reason="因涉嫌违纪违法被撤销资格" and level="市政协委员"'),
+			$this->comm_db->count("userid=$userid and " . 'dismiss_consul_reason="因涉嫌违纪违法被撤销资格" and level="县政协委员"'));
+		$row[dismiss2] = array($this->comm_db->count("userid=$userid and " . 'dismiss_consul_reason="丧失国籍" and level="全国政协委员"'),
+			$this->comm_db->count("userid=$userid and " . 'dismiss_consul_reason="丧失国籍" and level="省政协委员"'),
+			$this->comm_db->count("userid=$userid and " . 'dismiss_consul_reason="丧失国籍" and level="市政协委员"'),
+			$this->comm_db->count("userid=$userid and " . 'dismiss_consul_reason="丧失国籍" and level="县政协委员"'));
+		$row[order1] = array($this->comm_db->count("userid=$userid and " . 'type=7 and level="全国政协委员"'),
+			$this->comm_db->count("userid=$userid and " . 'type=7 and level="省政协委员"'),
+			$this->comm_db->count("userid=$userid and " . 'type=7 and level="市政协委员"'),
+			$this->comm_db->count("userid=$userid and " . 'type=7 and level="县政协委员"'));
+		$row[solve1] = array($this->comm_db->count("userid=$userid and " . 'type in (6, 7) and  measure_time <> "0000-00-00" and measure_time < "2016-06-20" and level="全国政协委员"'),
+			$this->comm_db->count("userid=$userid and " . 'type in (6, 7) and measure_time <> "0000-00-00" and measure_time < "2016-06-20" and level="省政协委员"'),
+			$this->comm_db->count("userid=$userid and " . 'type in (6, 7) and measure_time <> "0000-00-00" and measure_time < "2016-06-20" and level="市政协委员"'),
+			$this->comm_db->count("userid=$userid and " . 'type in (6, 7) and measure_time <> "0000-00-00" and measure_time < "2016-06-20" and level="县政协委员"'));
+		$row[solve2] = array($this->comm_db->count("userid=$userid and " . 'type in (6, 7) and  sanction_time <> "0000-00-00" and sanction_time < "2016-06-20" and level="全国政协委员"'),
+			$this->comm_db->count("userid=$userid and " . 'type in (6, 7) and sanction_time <> "0000-00-00" and sanction_time < "2016-06-20" and level="省政协委员"'),
+			$this->comm_db->count("userid=$userid and " . 'type in (6, 7) and sanction_time <> "0000-00-00" and sanction_time < "2016-06-20" and level="市政协委员"'),
+			$this->comm_db->count("userid=$userid and " . 'type in (6, 7) and sanction_time <> "0000-00-00" and sanction_time < "2016-06-20" and level="县政协委员"'));
+		$row[solveless1] = array($this->comm_db->count("userid=$userid and " . 'type in (6, 7) and  (measure_time = "0000-00-00" or measure_time > "2016-06-20") and level="全国政协委员"'),
+			$this->comm_db->count("userid=$userid and " . 'type in (6, 7) and (measure_time = "0000-00-00" or measure_time > "2016-06-20") and level="省政协委员"'),
+			$this->comm_db->count("userid=$userid and " . 'type in (6, 7) and (measure_time = "0000-00-00" or measure_time > "2016-06-20") and level="市政协委员"'),
+			$this->comm_db->count("userid=$userid and " . 'type in (6, 7) and (measure_time = "0000-00-00" or measure_time > "2016-06-20") and level="县政协委员"'));
+		$row[solveless2] = array($this->comm_db->count("userid=$userid and " . 'type in (6, 7) and  (sanction_time = "0000-00-00" or sanction_time > "2016-06-20") and level="全国政协委员"'),
+			$this->comm_db->count("userid=$userid and " . 'type in (6, 7) and (sanction_time = "0000-00-00" or sanction_time > "2016-06-20") and level="省政协委员"'),
+			$this->comm_db->count("userid=$userid and " . 'type in (6, 7) and (sanction_time = "0000-00-00" or sanction_time > "2016-06-20") and level="市政协委员"'),
+			$this->comm_db->count("userid=$userid and " . 'type in (6, 7) and (sanction_time = "0000-00-00" or sanction_time > "2016-06-20") and level="县政协委员"'));
+		$row[result1] = array($this->comm_db->count("userid=$userid and " . 'type in (6, 7) and  measure_time > "2016-06-20" and level="全国政协委员"'),
+			$this->comm_db->count("userid=$userid and " . 'type in (6, 7) and measure_time > "2016-06-20" and level="省政协委员"'),
+			$this->comm_db->count("userid=$userid and " . 'type in (6, 7) and measure_time > "2016-06-20" and level="市政协委员"'),
+			$this->comm_db->count("userid=$userid and " . 'type in (6, 7) and measure_time > "2016-06-20" and level="县政协委员"'));
+		$row[result2] = array($this->comm_db->count("userid=$userid and " . 'type in (6, 7) and  sanction_time > "2016-06-20" and level="全国政协委员"'),
+			$this->comm_db->count("userid=$userid and " . 'type in (6, 7) and sanction_time > "2016-06-20" and level="省政协委员"'),
+			$this->comm_db->count("userid=$userid and " . 'type in (6, 7) and sanction_time > "2016-06-20" and level="市政协委员"'),
+			$this->comm_db->count("userid=$userid and " . 'type in (6, 7) and sanction_time > "2016-06-20" and level="县政协委员"'));
 		include template('organization', 'consul_summary');
 	}
 
@@ -195,15 +232,15 @@ class summary extends foreground
 	{
 		$userid = $this->memberinfo['userid'];
 		$row = $this->orga_db->get_one(array('userid' => $userid));
-		if (isset($_POST['dosubmit'])) {
-			unset($_POST['dosubmit']);
-			if ($row) {
-				$this->orga_db->update($_POST, array('userid' => $userid));
-			} else {
-				$this->orga_db->insert($_POST);
-			}
-			showmessage(L('operation_success'), HTTP_REFERER);
-		}
+		$row[penalty1] = $this->comm_db->count("userid=$userid and type=8");
+		$row[penalty2] = $this->comm_db->count("userid=$userid and type=9");
+		$row[solve1] = $this->comm_db->count("userid=$userid and " . 'type in (8, 9) and  measure_time <> "0000-00-00" and measure_time < "2016-06-20" ');
+		$row[solve2] = $this->comm_db->count("userid=$userid and " . 'type in (8, 9) and  sanction_time <> "0000-00-00" and sanction_time < "2016-06-20" ');
+		$row[solveless1] = $this->comm_db->count("userid=$userid and " . 'type in (8, 9) and  (measure_time = "0000-00-00" or measure_time > "2016-06-20") ');
+		$row[solveless2] = $this->comm_db->count("userid=$userid and " . 'type in (8, 9) and  (sanction_time = "0000-00-00" or sanction_time > "2016-06-20") ');
+		$row[result1] = $this->comm_db->count("userid=$userid and " . 'type in (8, 9) and  measure_time > "2016-06-20" ');
+		$row[result2] = $this->comm_db->count("userid=$userid and " . 'type in (8, 9) and  sanction_time > "2016-06-20" ');
+
 		include template('organization', 'criminal_summary');
 	}
 
@@ -211,15 +248,13 @@ class summary extends foreground
 	{
 		$userid = $this->memberinfo['userid'];
 		$row = $this->orga_db->get_one(array('userid' => $userid));
-		if (isset($_POST['dosubmit'])) {
-			unset($_POST['dosubmit']);
-			if ($row) {
-				$this->orga_db->update($_POST, array('userid' => $userid));
-			} else {
-				$this->orga_db->insert($_POST);
-			}
-			showmessage(L('operation_success'), HTTP_REFERER);
-		}
+		$row[penalty1] = $this->comm_db->count("userid=$userid and type=10");
+		$row[solve1] = $this->comm_db->count("userid=$userid and " . 'type in (10) and  measure_time <> "0000-00-00" and measure_time < "2016-06-20" ');
+		$row[solve2] = $this->comm_db->count("userid=$userid and " . 'type in (10) and  sanction_time <> "0000-00-00" and sanction_time < "2016-06-20" ');
+		$row[solveless1] = $this->comm_db->count("userid=$userid and " . 'type in (10) and  (measure_time = "0000-00-00" or measure_time > "2016-06-20") ');
+		$row[solveless2] = $this->comm_db->count("userid=$userid and " . 'type in (10) and  (sanction_time = "0000-00-00" or sanction_time > "2016-06-20") ');
+		$row[result1] = $this->comm_db->count("userid=$userid and " . 'type in (10) and  measure_time > "2016-06-20" ');
+		$row[result2] = $this->comm_db->count("userid=$userid and " . 'type in (10) and  sanction_time > "2016-06-20" ');
 		include template('organization', 'admin_summary');
 	}
 }

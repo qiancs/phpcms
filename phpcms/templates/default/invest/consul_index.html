@@ -30,7 +30,7 @@
                     <tbody>
                     {loop $rows $val}
                     <tr>
-                        <td ><a href="?m=invest&c=congress&a=show&id={$val[id]}">{$val["name"]}</a> </td>
+                        <td ><a href="?m=invest&c=consul&a=show&id={$val[id]}">{$val["name"]}</a> </td>
                         <td>{$val["office"]}</td>
                         <td>{translate_invest_type($val["type"])}</td>
                         <td>{$val["organization"]}</td>

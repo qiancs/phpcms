@@ -30,7 +30,7 @@
                     <tbody>
                     <?php $n=1;if(is_array($rows)) foreach($rows AS $val) { ?>
                     <tr>
-                        <td ><a href="?m=invest&c=congress&a=show&id=<?php echo $val['id'];?>"><?php echo $val["name"];?></a> </td>
+                        <td ><a href="?m=invest&c=consul&a=show&id=<?php echo $val['id'];?>"><?php echo $val["name"];?></a> </td>
                         <td><?php echo $val["office"];?></td>
                         <td><?php echo translate_invest_type($val["type"]);?></td>
                         <td><?php echo $val["organization"];?></td>

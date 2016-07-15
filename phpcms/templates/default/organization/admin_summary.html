@@ -1,0 +1,74 @@
+{template 'member', 'header'}
+<style type="text/css">
+    td {border: inset;
+    text-align: center;}
+    .table_form th {
+    border: inset;
+    text-align: center}
+    p {text-align: center}
+</style>
+<div id="memberArea">
+    {template 'member', 'left'}
+    <div class="col-auto">
+        <div class="col-1">
+            <h5 class="title">受行政处罚的党员排查统计</h5>
+            <div class="content">
+                <form id="organizationform" action="" method="post">
+                    <br>
+                    <table class="table_form" style="width:100%; border: outset">
+                        <tr>
+                            <th colspan="2">统计类别</th>
+                            <th>总计</th>
+                        </tr>
+                        <tr>
+                            <th colspan="2">在册党员人数</th>
+                            <td><?php echo $row[total_num] ?></td>
+                        </tr>
+                        <tr>
+                            <th colspan="2">已排查党员人数</th>
+                            <td><?php echo $row[admin_num] ?></td>
+                        </tr> 
+                        <tr>
+                            <th colspan="2" >涉及“黄赌毒”等行政处罚案件，应当追究党纪责任的党员人数</th>
+                            <td>{$row[penalty1]}</td>
+                        </tr>
+
+                        <tr>
+                            <th rowspan="2" style="width: 100px">清理前已给予党纪处分和组织处理情况</th>
+                            <th style="width: 100px">党纪处分</th>
+                            <td>{$row[solve1]}</td>
+                        </tr>
+                        <tr>
+                            <th>组织处理</th>
+                            <td>{$row[solve2]}</td>
+                        </tr>
+                        <tr>
+                            <th rowspan="2">清理前未按规定给予党纪处分和组织处理情况</th>
+                            <th>党纪处分</th>
+                            <td>{$row[solveless1]}</td>
+                        </tr>
+                        <tr>
+                            <th>组织处理</th>
+                            <td>{$row[solveless2]}</td>
+                        </tr>
+                        <tr>
+                            <th rowspan="2">清理情况</th>
+                            <th>党纪处分</th>
+                            <td>{$row[result1]}</td>
+                        </tr>
+                        <tr>
+                            <th>组织处理</th>
+                            <td>{$row[result2]}</td>
+                        </tr>
+                    </table>
+                        <br>
+                        <p>
+                            <input type="submit" name="dosubmit" id="dosubmit" class="button" value="提交党代表人数">
+                            <input type="reset" value="重置" class="button">
+                        </p>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
