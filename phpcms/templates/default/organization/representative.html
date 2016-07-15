@@ -1,0 +1,86 @@
+{template 'member', 'header'}
+<style type="text/css">
+    td {border: inset;
+    text-align: center;}
+    .table_form th {
+    border: inset;
+    text-align: center}
+    p {text-align: center}
+</style>
+<div id="memberArea">
+    {template 'member', 'left'}
+    <div class="col-auto">
+        <div class="col-1">
+            <h5 class="title">党委信息</h5>
+            <div class="content">
+                <form id="organizationform" action="" method="post">
+                    <br>
+                    <table class="table_form" style="width:100%; border: outset">
+                        <th></th>
+                        <th>层次</th>
+                        <th>类别</th>
+                        <th align="center">本届选举党代表人数</th>
+                        <th>现有党代表人数</th>
+                        <tr>
+                            <th width="100" rowspan="9"  >党代表人数</th>
+                            <td align="center" width="20%"><label>全国</label></td>
+                            <td align="right"><label>十八大代表</label></td>
+                            <td><input id="rt1" name="rt1" value="{$row[rt1]}" type="text" class="input-text" size="10"></td>
+                            <td><input id="rn1" name="rn1" value="{$row[rn1]}" type="text" class="input-text" size="10"></td>
+
+                        </tr>
+                        <tr>
+                            <td align="center"rowspan="3"><label>地方</label></td>
+                            <td align="right"><label>省党代会代表</label></td>
+                            <td><input id="rt2" name="rt2" value="{$row[rt2]}" type="text" class="input-text" size="10"></td>
+                            <td><input id="rn2" name="rn2" value="{$row[rn2]}" type="text" class="input-text" size="10"></td>
+                        </tr>
+                        <tr>
+                            <td align="right"><label>市党代会代表</label></td>
+                            <td><input id="rt3" name="rt3" value="{$row[rt3]}" type="text" class="input-text" size="10"></td>
+                            <td><input id="rn3" name="rn3" value="{$row[rn3]}" type="text" class="input-text" size="10"></td>
+                        </tr>
+                        <tr>
+                            <td align="right"><label>县党代会代表</label></td>
+                            <td><input id="rt4" name="rt4" value="{$row[rt4]}" type="text" class="input-text" size="10"></td>
+                            <td><input id="rn4" name="rn4" value="{$row[rn4]}" type="text" class="input-text" size="10"></td>
+                        </tr>
+                        <tr>
+                            <td align="center" rowspan="5"><label>基层</label></td>
+                            <td align="right"><label>乡镇党代会代表</label></td>
+                            <td><input id="rt5" name="rt5" value="{$row[rt5]}" type="text" class="input-text" size="10"></td>
+                            <td><input id="rn5" name="rn5" value="{$row[rn5]}" type="text" class="input-text" size="10"></td>
+                        </tr>
+                        <tr>
+                            <td align="right"><label>机关党代会代表</label></td>
+                            <td><input id="rt6" name="rt6" value="{$row[rt6]}" type="text" class="input-text" size="10"></td>
+                            <td><input id="rn6" name="rn6" value="{$row[rn6]}" type="text" class="input-text" size="10"></td>
+                        </tr>
+                        <tr>
+                            <td align="right"><label>企业党代会代表</label></td>
+                            <td><input id="rt7" name="rt7" value="{$row[rt7]}" type="text" class="input-text" size="10"></td>
+                            <td><input id="rn7" name="rn7" value="{$row[rn7]}" type="text" class="input-text" size="10"></td>
+                        </tr>
+                        <tr>
+                            <td align="right"><label>高校党代会代表</label></td>
+                            <td><input id="rt8" name="rt8" value="{$row[rt8]}" type="text" class="input-text" size="10"></td>
+                            <td><input id="rn8" name="rn8" value="{$row[rn8]}" type="text" class="input-text" size="10"></td>
+                        </tr>
+                        <tr>
+                            <td align="right"><label>其他党代表</label></td>
+                            <td><input id="rt9" name="rt9" value="{$row[rt9]}" type="text" class="input-text" size="10"></td>
+                            <td><input id="rn9" name="rn9" value="{$row[rn9]}" type="text" class="input-text" size="10"></td>
+                        </tr>
+
+                    </table>
+                        <br>
+                        <p>
+                            <input type="submit" name="dosubmit" id="dosubmit" class="button" value="提交党代表人数">
+                            <input type="reset" value="重置" class="button">
+                        </p>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>

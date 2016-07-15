@@ -1,0 +1,68 @@
+{template 'member', 'header'}
+<style type="text/css">
+    td {border: inset;
+    text-align: center;}
+    .table_form th {
+    border: inset;
+    text-align: center}
+    p {text-align: center}
+</style>
+<div id="memberArea">
+    {template 'member', 'left'}
+    <div class="col-auto">
+        <div class="col-1">
+            <h5 class="title">党委信息</h5>
+            <div class="content">
+
+                <br>
+                <form id="organizationform" action="" method="post">
+                    <br>
+                    <table class="table_form" style="width:100%; border: outset">
+                        <th></th>
+                        <th>层次</th>
+                        <th>本届选举的政协委员人数</th>
+                        <th>本届选举的党员政协委员人数</th>
+                        <th>现有政协委员人数</th>
+                        <th>现有党员政协委员人数</th>
+                        <tr>
+                            <th width="100" rowspan="4"  >政协委员人数</th>
+                            <td align="right"><label>全国政协委员</label></td>
+                            <td><input id="c1t1" name="c1t1" value="{$row[c1t1]}" type="text" class="input-text" size="10"></td>
+                            <td><input id="c1tp1" name="c1tp1" value="{$row[c1tp1]}" type="text" class="input-text" size="10"></td>
+                            <td><input id="c1n1" name="c1n1" value="{$row[c1n1]}" type="text" class="input-text" size="10"></td>
+                            <td><input id="c1np1" name="c1np1" value="{$row[c1np1]}" type="text" class="input-text" size="10"></td>
+
+                        </tr>
+                        <tr>
+                            <td align="right"><label>省政协委员</label></td>
+                            <td><input id="c1t2" name="c1t2" value="{$row[c1t2]}" type="text" class="input-text" size="10"></td>
+                            <td><input id="c1tp2" name="c1tp2" value="{$row[c1tp2]}" type="text" class="input-text" size="10"></td>
+                            <td><input id="c1n2" name="c1n2" value="{$row[c1n2]}" type="text" class="input-text" size="10"></td>
+                            <td><input id="c1np2" name="c1np2" value="{$row[c1np2]}" type="text" class="input-text" size="10"></td>
+                        </tr>
+                        <tr>
+                            <td align="right"><label>市政协委员</label></td>
+                            <td><input id="c1t3" name="c1t3" value="{$row[c1t3]}" type="text" class="input-text" size="10"></td>
+                            <td><input id="c1tp3" name="c1tp3" value="{$row[c1tp3]}" type="text" class="input-text" size="10"></td>
+                            <td><input id="c1n3" name="c1n3" value="{$row[c1n3]}" type="text" class="input-text" size="10"></td>
+                            <td><input id="c1np3" name="c1np3" value="{$row[c1np3]}" type="text" class="input-text" size="10"></td>
+                        </tr>
+                        <tr>
+                            <td align="right"><label>政协委员</label></td>
+                            <td><input id="c1t4" name="c1t4" value="{$row[c1t4]}" type="text" class="input-text" size="10"></td>
+                            <td><input id="c1tp4" name="c1tp4" value="{$row[c1tp4]}" type="text" class="input-text" size="10"></td>
+                            <td><input id="c1n4" name="c1n4" value="{$row[c1n4]}" type="text" class="input-text" size="10"></td>
+                            <td><input id="c1np4" name="c1np4" value="{$row[c1np4]}" type="text" class="input-text" size="10"></td>
+                        </tr>
+                    </table>
+                    <br>
+                    <p>
+                        <input type="submit" name="dosubmit" id="dosubmit" class="button" value="提交党代表人数">
+                        <input type="reset" value="重置" class="button">
+                    </p>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>

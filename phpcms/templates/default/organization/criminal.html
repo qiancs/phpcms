@@ -1,0 +1,38 @@
+{template 'member', 'header'}
+<style type="text/css">
+    td {border: inset;
+    text-align: center;}
+    .table_form th {
+    border: inset;
+    text-align: center}
+    p {text-align: center}
+</style>
+<div id="memberArea">
+    {template 'member', 'left'}
+    <div class="col-auto">
+        <div class="col-1">
+            <h5 class="title">党委信息</h5>
+            <div class="content">
+
+                <form id="organizationform" action="" method="post">
+                    <br>
+                    <table class="table_form" style="width:100%; border: outset">
+                        <tr>
+                            <th>在册党员人数</th>
+                            <td><input id="total_num" name="total_num" value="{$row[total_num]}" type="text" class="input-text" size="10"></td>
+                        </tr>
+                        <tr>
+                            <th>受刑事责任追究中已排查党员人数</th>
+                            <td><input id="criminal_num" name="criminal_num" value="{$row[criminal_num]}" type="text" class="input-text" size="10"></td>
+                        </tr>
+                    </table>
+                    <br>
+                    <p>
+                        <input type="submit" name="dosubmit" id="dosubmit" class="button" value="提交党代表人数">
+                        <input type="reset" value="重置" class="button">
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

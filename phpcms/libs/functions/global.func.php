@@ -1794,5 +1794,45 @@ function get_vid($contentid = 0, $catid = 0, $isspecial = 0) {
 		return $minite.":".$secend;
 	}
 
- } 
+ }
+
+function translate_invest_type($id = 0) {
+	switch ($id) {
+		case 1:
+			$type = '终止资格党代表';
+			break;
+		case 2:
+			$type = '停止职务党代表';
+			break;
+		case 3:
+			$type = '终止资格人大代表';
+			break;
+		case 4:
+			$type = '暂停职务人大代表';
+			break;
+		case 5:
+			$type = '违纪当选人大代表';
+			break;
+		case 6:
+			$type = '撤销资格政协委员';
+			break;
+		case 7:
+			$type = '责令辞职政协委员';
+			break;
+		case 8:
+			$type = '有罪裁定、判决的党员';
+			break;
+		case 9:
+			$type = '情节轻微、不需判刑或免刑的党员';
+			break;
+		case 10:
+			$type = '受行政处罚的党员';
+			break;
+		default:
+			$type = '未知类型';
+
+
+	}
+	return $type;
+}
 ?>

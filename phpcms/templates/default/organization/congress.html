@@ -1,0 +1,74 @@
+{template 'member', 'header'}
+<style type="text/css">
+    td {border: inset;
+    text-align: center;}
+    .table_form th {
+    border: inset;
+    text-align: center}
+    p {text-align: center}
+</style>
+<div id="memberArea">
+    {template 'member', 'left'}
+    <div class="col-auto">
+        <div class="col-1">
+            <h5 class="title">党委信息</h5>
+            <div class="content">
+                <br>
+                <form id="organizationform" action="" method="post">
+                    <br>
+                    <table class="table_form" style="width:100%; border: outset">
+                        <th></th>
+                        <th>层次</th>
+                        <th>本届选举的人大代表人数</th>
+                        <th>本届选举的党员人大代表人数</th>
+                        <th>现有人大代表人数</th>
+                        <th>现有党员人大代表人数</th>
+                        <tr>
+                            <th width="100" rowspan="5"  >人大代表人数</th>
+                            <td align="right"><label>全国人大代表</label></td>
+                            <td><input id="ct1" name="ct1" value="{$row[ct1]}" type="text" class="input-text" size="10"></td>
+                            <td><input id="ctp1" name="ctp1" value="{$row[ctp1]}" type="text" class="input-text" size="10"></td>
+                            <td><input id="cn1" name="cn1" value="{$row[cn1]}" type="text" class="input-text" size="10"></td>
+                            <td><input id="cnp1" name="cnp1" value="{$row[cnp1]}" type="text" class="input-text" size="10"></td>
+
+                        </tr>
+                        <tr>
+                            <td align="right"><label>省人大代表</label></td>
+                            <td><input id="ct2" name="ct2" value="{$row[ct2]}" type="text" class="input-text" size="10"></td>
+                            <td><input id="ctp2" name="ctp2" value="{$row[ctp2]}" type="text" class="input-text" size="10"></td>
+                            <td><input id="cn2" name="cn2" value="{$row[cn2]}" type="text" class="input-text" size="10"></td>
+                            <td><input id="cnp2" name="cnp2" value="{$row[cnp2]}" type="text" class="input-text" size="10"></td>
+                        </tr>
+                        <tr>
+                            <td align="right"><label>市人大代表</label></td>
+                            <td><input id="ct3" name="ct3" value="{$row[ct3]}" type="text" class="input-text" size="10"></td>
+                            <td><input id="ctp3" name="ctp3" value="{$row[ctp3]}" type="text" class="input-text" size="10"></td>
+                            <td><input id="cn3" name="cn3" value="{$row[cn3]}" type="text" class="input-text" size="10"></td>
+                            <td><input id="cnp3" name="cnp3" value="{$row[cnp3]}" type="text" class="input-text" size="10"></td>
+                        </tr>
+                        <tr>
+                            <td align="right"><label>县人大代表</label></td>
+                            <td><input id="ct4" name="ct4" value="{$row[ct4]}" type="text" class="input-text" size="10"></td>
+                            <td><input id="ctp4" name="ctp4" value="{$row[ctp4]}" type="text" class="input-text" size="10"></td>
+                            <td><input id="cn4" name="cn4" value="{$row[cn4]}" type="text" class="input-text" size="10"></td>
+                            <td><input id="cnp4" name="cnp4" value="{$row[cnp4]}" type="text" class="input-text" size="10"></td>
+                        </tr>
+                        <tr>
+                            <td align="right"><label>乡镇人大代表</label></td>
+                            <td><input id="ct5" name="ct5" value="{$row[ct5]}" type="text" class="input-text" size="10"></td>
+                            <td><input id="ctp5" name="ctp5" value="{$row[ctp5]}" type="text" class="input-text" size="10"></td>
+                            <td><input id="cn5" name="cn5" value="{$row[cn5]}" type="text" class="input-text" size="10"></td>
+                            <td><input id="cnp5" name="cnp5" value="{$row[cnp5]}" type="text" class="input-text" size="10"></td>
+                        </tr>
+                        <br>
+
+                    </table>
+                    <p>
+                        <input type="submit" name="dosubmit" id="dosubmit" class="button" value="提交党代表人数">
+                        <input type="reset" value="重置" class="button">
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

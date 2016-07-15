@@ -4,16 +4,93 @@
  */
 
 defined('IN_PHPCMS') or exit('No permission resources.');
-pc_base::load_app_class('foreground');
+pc_base::load_app_class('foreground', 'member');
 pc_base::load_sys_class('format', '', 0);
 pc_base::load_sys_class('form', '', 0);
 
 class index extends foreground {
 
 	private $times_db;
+	private $orga_db;
 	
 	function __construct() {
 		parent::__construct();
+		$this->orga_db = pc_base::load_model('organization_model');
+	}
+
+	public function representative() {
+		$userid = $this->memberinfo['userid'];
+		$row = $this->orga_db->get_one(array('userid' => $userid));
+		if(isset($_POST['dosubmit'])) {
+			unset($_POST['dosubmit']);
+			if ($row) {
+				$this->orga_db->update($_POST, array('userid' => $userid));
+			} else {
+				$this->orga_db->insert($_POST);
+			}
+			showmessage(L('operation_success'), HTTP_REFERER);
+		}
+		include template('organization', 'representative');
+	}
+
+	public function congress() {
+		$userid = $this->memberinfo['userid'];
+		$row = $this->orga_db->get_one(array('userid' => $userid));
+		if(isset($_POST['dosubmit'])) {
+			unset($_POST['dosubmit']);
+			if ($row) {
+				$this->orga_db->update($_POST, array('userid' => $userid));
+			} else {
+				$this->orga_db->insert($_POST);
+			}
+			showmessage(L('operation_success'), HTTP_REFERER);
+		}
+		include template('organization', 'congress');
+	}
+
+	public function consul() {
+		$userid = $this->memberinfo['userid'];
+		$row = $this->orga_db->get_one(array('userid' => $userid));
+		if(isset($_POST['dosubmit'])) {
+			unset($_POST['dosubmit']);
+			if ($row) {
+				$this->orga_db->update($_POST, array('userid' => $userid));
+			} else {
+				$this->orga_db->insert($_POST);
+			}
+			showmessage(L('operation_success'), HTTP_REFERER);
+		}
+		include template('organization', 'consul');
+	}
+
+	public function criminal() {
+		$userid = $this->memberinfo['userid'];
+		$row = $this->orga_db->get_one(array('userid' => $userid));
+		if(isset($_POST['dosubmit'])) {
+			unset($_POST['dosubmit']);
+			if ($row) {
+				$this->orga_db->update($_POST, array('userid' => $userid));
+			} else {
+				$this->orga_db->insert($_POST);
+			}
+			showmessage(L('operation_success'), HTTP_REFERER);
+		}
+		include template('organization', 'criminal');
+	}
+
+	public function admin() {
+		$userid = $this->memberinfo['userid'];
+		$row = $this->orga_db->get_one(array('userid' => $userid));
+		if(isset($_POST['dosubmit'])) {
+			unset($_POST['dosubmit']);
+			if ($row) {
+				$this->orga_db->update($_POST, array('userid' => $userid));
+			} else {
+				$this->orga_db->insert($_POST);
+			}
+			showmessage(L('operation_success'), HTTP_REFERER);
+		}
+		include template('organization', 'admin');
 	}
 
 	public function init() {

@@ -8,7 +8,7 @@
  */
 defined('IN_PHPCMS') or exit('No permission resources.');
 //pc_base::load_app_class('admin', 'admin', 0);
-pc_base::load_app_class('foreground', 'member');
+pc_base::load_app_class('foreground', 'organization');
 pc_base::load_sys_class('format', '', 0);
 pc_base::load_sys_class('form', '', 0);
 class organization extends foreground
@@ -26,6 +26,10 @@ class organization extends foreground
         $rows = $this->db->select(" userid in ( $userid)");
         //include $this->admin_tpl('index');
         include template('invest', 'organization_index');
+    }
+
+    function organization_manage_info() {
+
     }
 
     function delete() {

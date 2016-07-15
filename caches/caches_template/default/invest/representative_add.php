@@ -18,6 +18,7 @@
         $("#stop_repre_reason").formValidator({onshow:"<?php echo L('input');?>",onfocus:"<?php echo L('cannot_empty');?>"}).inputValidator({min: 1, onerror:"<?php echo L('cannot_empty');?>"});
         $(":radio[name='is_stop']").formValidator({onshow:"<?php echo L('input');?>",onfocus:"<?php echo L('cannot_empty');?>"}).inputValidator({min: 1, onerror:"<?php echo L('cannot_empty');?>"});
         $("#stop_repre_time").formValidator({onshow:"<?php echo L('input');?>",onfocus:"<?php echo L('cannot_empty');?>"}).inputValidator({min: 1, onerror:"<?php echo L('cannot_empty');?>"});
+        $("#level").formValidator({onshow:"<?php echo L('input');?>",onfocus:"<?php echo L('cannot_empty');?>"}).inputValidator({min: 1, onerror:"<?php echo L('cannot_empty');?>"});
     });
 
     //-->

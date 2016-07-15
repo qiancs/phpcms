@@ -19,26 +19,20 @@
             <div class="content">
                 <table cellpadding="0" width="100%" class="table-list">
                     <thead>
-                        <tr>
-                            <th>姓名</th>
-                            <th>现任（原任职务）</th>
-                            <th>性别</th>
-                            <th>民族</th>
-                            <th>出生年月</th>
-                            <th>入党时间</th>
-                            <th>单位</th>
-                            <th colspan="2">操作</th>
-                        </tr>
+                    <tr>
+                        <th>姓名</th>
+                        <th>现任（原任职务）</th>
+                        <th>排查类型</th>
+                        <th>单位</th>
+                        <th colspan="2">操作</th>
+                    </tr>
                     </thead>
                     <tbody>
                     <?php $n=1;if(is_array($rows)) foreach($rows AS $val) { ?>
                     <tr>
-                        <td ><a href="?m=invest&c=consul&a=show&id=<?php echo $val['id'];?>"><?php echo $val["name"];?></a> </td>
+                        <td ><a href="?m=invest&c=congress&a=show&id=<?php echo $val['id'];?>"><?php echo $val["name"];?></a> </td>
                         <td><?php echo $val["office"];?></td>
-                        <td><?php echo $val["sex"];?></td>
-                        <td><?php echo $val["nation"];?></td>
-                        <td><?php echo $val["birth"];?></td>
-                        <td><?php echo $val["party"];?></td>
+                        <td><?php echo translate_invest_type($val["type"]);?></td>
                         <td><?php echo $val["organization"];?></td>
                         <td><a href="?m=invest&c=consul&a=modify&id=<?php echo $val['id'];?>">修改</a> </td>
                         <td><a href="?m=invest&c=consul&a=delete&id=<?php echo $val['id'];?>" onclick="if (!confirm('确认要删除？')) window.event.returnValue = false; ">删除</a> </td>

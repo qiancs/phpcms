@@ -118,3 +118,4 @@
 <?php exit;?>07-08 18:19:12 | 2048 | Only variables should be passed by reference | phpcms\modules\member\index.php | 232
 <?php exit;?>07-08 18:24:19 | 2048 | Only variables should be passed by reference | phpcms\modules\member\index.php | 232
 <?php exit;?>07-08 18:25:12 | 2048 | Only variables should be passed by reference | phpcms\modules\member\index.php | 232
+<?php exit;?>07-11 08:29:17 | 2048 | Only variables should be passed by reference | phpcms\modules\member\index.php | 232
