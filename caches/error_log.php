@@ -119,3 +119,23 @@
 <?php exit;?>07-08 18:24:19 | 2048 | Only variables should be passed by reference | phpcms\modules\member\index.php | 232
 <?php exit;?>07-08 18:25:12 | 2048 | Only variables should be passed by reference | phpcms\modules\member\index.php | 232
 <?php exit;?>07-11 08:29:17 | 2048 | Only variables should be passed by reference | phpcms\modules\member\index.php | 232
+<?php exit;?>07-19 09:39:35 | 2048 | Only variables should be passed by reference | phpcms\modules\member\index.php | 232
+<?php exit;?>07-19 09:40:42 | 2048 | Only variables should be passed by reference | phpcms\modules\member\index.php | 232
+<?php exit;?>07-19 11:52:27 | 2 | Invalid argument supplied for foreach() | phpcms\modules\invest\templates\communist_list.tpl.php | 40
+<?php exit;?>07-19 11:52:30 | 2 | Invalid argument supplied for foreach() | phpcms\modules\invest\templates\communist_list.tpl.php | 40
+<?php exit;?>07-19 11:52:31 | 2 | Invalid argument supplied for foreach() | phpcms\modules\invest\templates\communist_list.tpl.php | 40
+<?php exit;?>07-19 15:41:21 | 2 | Invalid argument supplied for foreach() | phpcms\modules\invest\templates\communist_list.tpl.php | 41
+<?php exit;?>07-19 16:01:40 | 2 | Invalid argument supplied for foreach() | phpcms\modules\invest\templates\communist_list.tpl.php | 40
+<?php exit;?>07-19 16:04:35 | 2 | Invalid argument supplied for foreach() | phpcms\modules\invest\templates\communist_list.tpl.php | 40
+<?php exit;?>07-19 16:05:26 | 2 | Invalid argument supplied for foreach() | phpcms\modules\invest\templates\communist_list.tpl.php | 40
+<?php exit;?>07-19 17:27:50 | 2 | Invalid argument supplied for foreach() | phpcms\modules\invest\templates\communist_list.tpl.php | 40
+<?php exit;?>07-19 17:42:36 | 2 | Invalid argument supplied for foreach() | phpcms\modules\invest\templates\communist_list.tpl.php | 40
+<?php exit;?>07-19 18:02:57 | 2 | Invalid argument supplied for foreach() | phpcms\modules\invest\templates\communist_list.tpl.php | 40
+<?php exit;?>07-19 18:02:59 | 2 | Invalid argument supplied for foreach() | phpcms\modules\invest\templates\communist_list.tpl.php | 40
+<?php exit;?>07-19 18:03:00 | 2 | Invalid argument supplied for foreach() | phpcms\modules\invest\templates\communist_list.tpl.php | 40
+<?php exit;?>07-19 18:12:33 | 2 | Invalid argument supplied for foreach() | phpcms\modules\invest\templates\communist_list.tpl.php | 40
+<?php exit;?>07-19 18:33:00 | 2 | Invalid argument supplied for foreach() | phpcms\modules\invest\templates\communist_list.tpl.php | 40
+<?php exit;?>07-19 18:33:24 | 2 | Invalid argument supplied for foreach() | phpcms\modules\invest\templates\communist_list.tpl.php | 40
+<?php exit;?>07-19 18:33:40 | 2 | Invalid argument supplied for foreach() | phpcms\modules\invest\templates\communist_list.tpl.php | 40
+<?php exit;?>07-19 18:34:31 | 2 | Invalid argument supplied for foreach() | phpcms\modules\invest\templates\communist_list.tpl.php | 40
+<?php exit;?>07-19 19:27:55 | 2 | Invalid argument supplied for foreach() | phpcms\modules\invest\templates\communist_list.tpl.php | 40

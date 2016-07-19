@@ -420,5 +420,19 @@ return array (
     'installdate' => '2016-06-10',
     'updatedate' => '2016-06-15',
   ),
+  'organization' => 
+  array (
+    'module' => 'organization',
+    'name' => '单位管理',
+    'url' => 'organization/',
+    'iscore' => '0',
+    'version' => '1.0',
+    'description' => '单位各级下属单位',
+    'setting' => '',
+    'listorder' => '0',
+    'disabled' => '0',
+    'installdate' => '2016-07-06',
+    'updatedate' => '2016-07-06',
+  ),
 );
 ?>

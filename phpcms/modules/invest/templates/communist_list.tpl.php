@@ -3,6 +3,15 @@ defined('IN_ADMIN') or exit('No permission resources.');
 $show_dialog = 1;
 include $this->admin_tpl('header','admin');
 ?>
+<SCRIPT LANGUAGE="JavaScript">
+    <!--
+    if(window.top.$("#current_pos").data('clicknum')==1 || window.top.$("#current_pos").data('clicknum')==null) {
+        parent.document.getElementById('display_center_id').style.display='';
+        parent.document.getElementById('center_frame').src = '?m=invest&c=invest&a=public_organization_tree&menuid=<?php echo $_GET[menuid] ?>&pc_hash=<?php echo $_SESSION['pc_hash'];?>';
+        window.top.$("#current_pos").data('clicknum',0);
+    }
+    //-->
+</SCRIPT>
 <div class="pad-lr-10">
     <form name="searchform" action="?m=message&c=message&a=search_message&menuid=<?php echo $_GET['menuid'];?>" method="post" >
         <table width="100%" cellspacing="0" class="search-form">

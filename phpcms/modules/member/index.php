@@ -402,7 +402,7 @@ class index extends foreground {
 	}
 	
 	public function account_manage_info() {
-		$rows = $this->db->select('', 'userid, organization');
+		$rows = $this->db->select('', 'userid, organization, parentid');
 		foreach($rows as $row) {
 			$organizations[$row[userid]] = $row[organization];
 		}
@@ -410,10 +410,10 @@ class index extends foreground {
 			//更新用户昵称
 			$nickname = isset($_POST['nickname']) && is_username(trim($_POST['nickname'])) ? trim($_POST['nickname']) : '';
 			$organization = isset($_POST['organization']) && is_username(trim($_POST['organization'])) ? trim($_POST['organization']) : '';
-			$parentid = isset($_POST['parentid']) && is_int(trim($_POST['parentid'])) ? intval(trim($_POST['parentid'])) : 0;
+			$parentid = isset($_POST['parentid']) ? intval(trim($_POST['parentid'])) : 0;
 			$nickname = safe_replace($nickname);
 			$organization = safe_replace($organization);
-			if($nickname) {
+			if($nickname && $organization) {
 				$this->db->update(array('nickname'=>$nickname, 'organization' => $organization, 'parentid' => $parentid), array('userid'=>$this->memberinfo['userid']));
 				if(!isset($cookietime)) {
 					$get_cookietime = param::get_cookie('cookietime');

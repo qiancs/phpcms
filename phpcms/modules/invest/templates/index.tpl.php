@@ -1,5 +1,17 @@
+<?php
+defined('IN_ADMIN') or exit('No permission resources.');
+include $this->admin_tpl('header','admin');?>
 <link type="text/css" rel="stylesheet" href="<?php echo BS_PATH; ?>css/bootstrap.min.css" />
-
+<SCRIPT LANGUAGE="JavaScript">
+    <!--
+    alert('center');
+    if(window.top.$("#current_pos").data('clicknum')==1 || window.top.$("#current_pos").data('clicknum')==null) {
+        parent.document.getElementById('display_center_id').style.display='';
+        parent.document.getElementById('center_frame').src = '?m=content&c=content&a=public_categorys&type=add&menuid=<?php echo $_GET['menuid'];?>&pc_hash=<?php echo $_SESSION['pc_hash'];?>';
+        window.top.$("#current_pos").data('clicknum',0);
+    }
+    //-->
+</SCRIPT>
 <script href="<?php echo JS_PATH; ?>jquery.min.js"></script>
 <script href="<?php echo BS_PATH; ?>js/bootstrap.min.js"></script>
 <?php

@@ -456,4 +456,5 @@ $LANG['clear_data'] = '一键清理';
 $LANG['player_manage'] = '播放器管理';
 $LANG['video_upload'] = '视频上传'; 
 $LANG['invest'] = '党员排查';
+$LANG['representative'] = '党代表排查';
 ?>
