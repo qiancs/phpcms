@@ -5,6 +5,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=<?php echo CHARSET?>" />
 <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
 <title><?php echo L('admin_site_title')?></title>
+<!--<link rel="stylesheet" type="text/css" href="<?php /*echo BS_PATH; */?>css/bootstrap.css" title="bootstrap" media="screen" />-->
 <link href="<?php echo CSS_PATH?>reset.css" rel="stylesheet" type="text/css" />
 <link href="<?php echo CSS_PATH.SYS_STYLE;?>-system.css" rel="stylesheet" type="text/css" />
 <link href="<?php echo CSS_PATH?>dialog.css" rel="stylesheet" type="text/css" />
@@ -12,7 +13,8 @@
 <link rel="alternate stylesheet" type="text/css" href="<?php echo CSS_PATH?>style/<?php echo SYS_STYLE;?>-styles2.css" title="styles2" media="screen" />
 <link rel="alternate stylesheet" type="text/css" href="<?php echo CSS_PATH?>style/<?php echo SYS_STYLE;?>-styles3.css" title="styles3" media="screen" />
 <link rel="alternate stylesheet" type="text/css" href="<?php echo CSS_PATH?>style/<?php echo SYS_STYLE;?>-styles4.css" title="styles4" media="screen" />
-<script language="javascript" type="text/javascript" src="<?php echo JS_PATH?>jquery.min.js"></script>
+<!--<script language="javascript" type="text/javascript" src="<?php /*echo JS_PATH*/?>jquery.min.js"></script>-->
+	<script language="javascript" type="text/javascript" src="<?php echo JS_PATH?>jquery-1.12.4.js"></script>
 <script language="javascript" type="text/javascript" src="<?php echo JS_PATH?>styleswitch.js"></script>
 <script language="javascript" type="text/javascript" src="<?php echo JS_PATH?>dialog.js"></script>
 <script language="javascript" type="text/javascript" src="<?php echo JS_PATH?>hotkeys.js"></script>

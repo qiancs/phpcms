@@ -54,7 +54,11 @@ class invest extends admin
         //$show_header = 1;
         $id = isset($_GET[id]) ? intval($_GET[id]) : 0;
         $rows = $this->orga_db->select("userid=$id");
-        $big_menu = array('javascript:window.top.art.dialog({id:\'add\',iframe:\'?m=invest&c=invest&menuid=\$menuid&a=init\', title:\''.'详细信息'.'\', width:\'700\', height:\'450\'}, function(){var d = window.top.art.dialog({id:\'add\'}).data.iframe;var form = d.document.getElementById(\'dosubmit\');form.click();return false;}, function(){window.top.art.dialog({id:\'add\'}).close()});void(0);', '详细信息');
+        $menuid = $_GET[menuid];
+        //$big_menu = array('javascript:window.top.art.dialog({id:\'add\',iframe:\'?m=invest&c=invest&menuid=\$menuid&a=init\', title:\''.'详细信息'.'\', width:\'700\', height:\'450\'}, function(){var d = window.top.art.dialog({id:\'add\'}).data.iframe;var form = d.document.getElementById(\'dosubmit\');form.click();return false;}, function(){window.top.art.dialog({id:\'add\'}).close()});void(0);', '详细信息');
+        if($_GET[m] == 'organization' && $_GET[c] == 'summary') {
+            $selected = $_GET[a];
+        }
         include $this->admin_tpl('communist_list');
     }
 

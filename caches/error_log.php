@@ -139,3 +139,31 @@
 <?php exit;?>07-19 18:33:40 | 2 | Invalid argument supplied for foreach() | phpcms\modules\invest\templates\communist_list.tpl.php | 40
 <?php exit;?>07-19 18:34:31 | 2 | Invalid argument supplied for foreach() | phpcms\modules\invest\templates\communist_list.tpl.php | 40
 <?php exit;?>07-19 19:27:55 | 2 | Invalid argument supplied for foreach() | phpcms\modules\invest\templates\communist_list.tpl.php | 40
+<?php exit;?>07-21 10:25:09 | 2 | Invalid argument supplied for foreach() | phpcms\modules\invest\templates\communist_list.tpl.php | 40
+<?php exit;?>07-21 11:35:35 | 2 | Invalid argument supplied for foreach() | phpcms\modules\invest\templates\communist_list.tpl.php | 40
+<?php exit;?>07-21 11:35:38 | 2 | Invalid argument supplied for foreach() | phpcms\modules\invest\templates\communist_list.tpl.php | 40
+<?php exit;?>07-21 11:59:50 | 2 | Invalid argument supplied for foreach() | phpcms\modules\invest\templates\communist_list.tpl.php | 40
+<?php exit;?>07-21 12:04:44 | 2 | Invalid argument supplied for foreach() | phpcms\modules\invest\templates\communist_list.tpl.php | 40
+<?php exit;?>07-21 12:38:40 | 2 | Invalid argument supplied for foreach() | phpcms\modules\invest\templates\communist_list.tpl.php | 40
+<?php exit;?>07-21 14:43:01 | 2 | Invalid argument supplied for foreach() | phpcms\modules\invest\templates\communist_list.tpl.php | 40
+<?php exit;?>07-21 14:43:11 | 2 | Invalid argument supplied for foreach() | phpcms\modules\invest\templates\communist_list.tpl.php | 40
+<?php exit;?>07-21 14:43:14 | 2 | Invalid argument supplied for foreach() | phpcms\modules\invest\templates\communist_list.tpl.php | 40
+<?php exit;?>07-21 14:43:15 | 2 | Invalid argument supplied for foreach() | phpcms\modules\invest\templates\communist_list.tpl.php | 40
+<?php exit;?>07-21 14:53:02 | 2 | Invalid argument supplied for foreach() | phpcms\modules\invest\templates\communist_list.tpl.php | 40
+<?php exit;?>07-21 15:01:15 | 2 | Invalid argument supplied for foreach() | phpcms\modules\invest\templates\communist_list.tpl.php | 41
+<?php exit;?>07-21 15:03:10 | 2 | Invalid argument supplied for foreach() | phpcms\modules\invest\templates\communist_list.tpl.php | 41
+<?php exit;?>07-21 15:05:54 | 2 | Invalid argument supplied for foreach() | phpcms\modules\invest\templates\communist_list.tpl.php | 41
+<?php exit;?>07-21 15:06:13 | 2 | Invalid argument supplied for foreach() | phpcms\modules\invest\templates\communist_list.tpl.php | 41
+<?php exit;?>07-21 15:07:46 | 2 | Invalid argument supplied for foreach() | phpcms\modules\invest\templates\communist_list.tpl.php | 41
+<?php exit;?>07-21 15:27:32 | 2 | Invalid argument supplied for foreach() | phpcms\modules\invest\templates\communist_list.tpl.php | 45
+<?php exit;?>07-21 15:28:17 | 2 | Invalid argument supplied for foreach() | phpcms\modules\invest\templates\communist_list.tpl.php | 45
+<?php exit;?>07-21 18:08:17 | 2 | include(D:\xampp\htdocs\phpcms\phpcms\modules\representative_statistic\templates\organization.tpl.php): failed to open stream: No such file or directory | phpcms\modules\organization\organization.php | 115
+<?php exit;?>07-21 18:08:17 | 2 | include(): Failed opening 'D:\xampp\htdocs\phpcms\phpcms\modules\representative_statistic\templates\organization.tpl.php' for inclusion (include_path='D:\xampp\php\PEAR') | phpcms\modules\organization\organization.php | 115
+<?php exit;?>07-22 10:40:43 | 2 | include(D:\xampp\htdocs\phpcms\phpcms\modules\representative_statistic\templates\organization.tpl.php): failed to open stream: No such file or directory | phpcms\modules\organization\organization.php | 115
+<?php exit;?>07-22 10:40:43 | 2 | include(): Failed opening 'D:\xampp\htdocs\phpcms\phpcms\modules\representative_statistic\templates\organization.tpl.php' for inclusion (include_path='D:\xampp\php\PEAR') | phpcms\modules\organization\organization.php | 115
+<?php exit;?>07-22 10:41:32 | 2 | include(D:\xampp\htdocs\phpcms\phpcms\modules\representative_statistic\templates\organization.tpl.php): failed to open stream: No such file or directory | phpcms\modules\organization\organization.php | 115
+<?php exit;?>07-22 10:41:32 | 2 | include(): Failed opening 'D:\xampp\htdocs\phpcms\phpcms\modules\representative_statistic\templates\organization.tpl.php' for inclusion (include_path='D:\xampp\php\PEAR') | phpcms\modules\organization\organization.php | 115
+<?php exit;?>07-22 10:42:07 | 2 | include(D:\xampp\htdocs\phpcms\phpcms\modules\representative_statistic\templates\organization.tpl.php): failed to open stream: No such file or directory | phpcms\modules\organization\organization.php | 115
+<?php exit;?>07-22 10:42:07 | 2 | include(): Failed opening 'D:\xampp\htdocs\phpcms\phpcms\modules\representative_statistic\templates\organization.tpl.php' for inclusion (include_path='D:\xampp\php\PEAR') | phpcms\modules\organization\organization.php | 115
+<?php exit;?>07-22 10:43:00 | 2 | include(D:\xampp\htdocs\phpcms\phpcms\modules\representative_statistic\templates\organization.tpl.php): failed to open stream: No such file or directory | phpcms\modules\organization\organization.php | 115
+<?php exit;?>07-22 10:43:00 | 2 | include(): Failed opening 'D:\xampp\htdocs\phpcms\phpcms\modules\representative_statistic\templates\organization.tpl.php' for inclusion (include_path='D:\xampp\php\PEAR') | phpcms\modules\organization\organization.php | 115
